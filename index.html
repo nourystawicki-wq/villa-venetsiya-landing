@@ -456,10 +456,13 @@ footer .logo b{color:var(--ivory)}
 .q .qphotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:16px}
 .q .qphotos figure{margin:0;border-radius:10px;overflow:hidden}
 .q .qphotos img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.way .way-cards{display:grid;grid-template-columns:repeat(2,minmax(0,400px));gap:16px 24px;margin:4px 0 28px;align-items:start}
 .way .map-card{margin:4px 0 28px;max-width:400px}
+.way .way-cards .map-card{margin:0;max-width:none}
 .way .map-card a{display:block;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)}
 .way .map-card img{width:100%;height:auto;display:block}
 .way .map-card figcaption{padding:8px 2px 0;font:500 13px/1.35 var(--sans);color:#efe6d4}
+@media (max-width:700px){.way .way-cards{grid-template-columns:1fr;max-width:400px}}
 @media (min-width:701px){
 .hero-over,.hero-over .row,.hero-dock{display:contents}
 .hero-copy{display:grid;grid-template-columns:auto auto;justify-content:start;align-items:start;column-gap:12px}
@@ -1064,12 +1067,20 @@ footer .logo b{color:var(--ivory)}
   <div class="wrap">
     <div class="eyebrow rv">Как добраться</div>
     <h2 class="h2 rv d1">Барнаул, <em>Пароходная,&nbsp;49</em></h2>
-    <figure class="map-card rv d2">
-      <a href="images/route-map.jpg" target="_blank" rel="noopener" title="Открыть карту проезда в полном размере">
-        <picture><source type="image/webp" srcset="images/route-map-800.webp 800w, images/route-map-1290.webp 1290w" sizes="(max-width:700px) 100vw, 400px"><img src="images/route-map.jpg" width="1290" height="1739" alt="Карта проезда к «Вилле Венеция»: Барнаул, Пароходная, 49" loading="lazy"></picture>
-      </a>
-      <figcaption>Карта проезда — нажмите, чтобы открыть полностью</figcaption>
-    </figure>
+    <div class="way-cards rv d2">
+      <figure class="map-card">
+        <a href="images/route-map.jpg" target="_blank" rel="noopener" title="Открыть карту проезда в полном размере">
+          <picture><source type="image/webp" srcset="images/route-map-800.webp 800w, images/route-map-1290.webp 1290w" sizes="(max-width:700px) 100vw, 400px"><img src="images/route-map.jpg" width="1290" height="1739" alt="Карта проезда к «Вилле Венеция»: Барнаул, Пароходная, 49" loading="lazy"></picture>
+        </a>
+        <figcaption>Карта проезда — нажмите, чтобы открыть полностью</figcaption>
+      </figure>
+      <figure class="map-card">
+        <a href="images/aerial.jpg" target="_blank" rel="noopener" title="Открыть фото территории в полном размере">
+          <picture><source type="image/webp" srcset="images/aerial-800.webp 800w, images/aerial-1500.webp 1500w" sizes="(max-width:700px) 100vw, 400px"><img src="images/aerial.jpg" width="1500" height="2237" alt="Вилла Венеция с высоты: парковка, дом, сад, площадка для церемоний и причал" loading="lazy"></picture>
+        </a>
+        <figcaption>Всё рядом — всё для вас</figcaption>
+      </figure>
+    </div>
 
     <dl class="rv d2">
       <dt>Адрес</dt><dd>Барнаул, ул. Пароходная, 49</dd>
