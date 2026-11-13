@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="https://villav.ru/images/og.jpg">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="images/favicon.svg" sizes="32x32" type="image/svg+xml">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.svg">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&amp;family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -430,6 +430,24 @@ footer .logo b{color:var(--ivory)}
 .wa-need{display:block;margin-top:8px;font-size:12.5px;color:var(--gold2)}
 .paper .wa-need{color:#9a6a26}
 
+
+.shot-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0 8px}
+@media (max-width:700px){.shot-row{grid-template-columns:1fr 1fr}}
+.shot-row figure{margin:0;border-radius:14px;overflow:hidden}
+.shot-row img,.shot-row video{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:3/4;background:#182e28}
+.shot-row.pair{grid-template-columns:1fr 1fr}
+.shot-row figcaption,.qphotos figcaption{font:500 12.5px/1.35 var(--sans);color:var(--txm);padding:8px 2px 0}
+.shot-row .vid{display:block;margin:20px 0 8px;max-width:360px}
+.shot-row .vid video{aspect-ratio:9/16;width:100%;background:#182e28;display:block;border-radius:14px}
+.q .qphotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:16px}
+.q .qphotos figure{margin:0;border-radius:10px;overflow:hidden}
+.q .qphotos img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.way .map-card{margin:4px 0 28px;max-width:400px}
+.way .map-card a{display:block;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)}
+.way .map-card img{width:100%;height:auto;display:block}
+.way .map-card figcaption{padding:8px 2px 0;font:500 13px/1.35 var(--sans);color:#efe6d4}
+@media (max-width:700px){.hero .bg img{object-position:50% 18%}}
+
 </style>
 <!--
   Аналитика: место под счётчик Яндекс.Метрики.
@@ -487,10 +505,7 @@ footer .logo b{color:var(--ivory)}
   Видео-ролик для замены фото: [НУЖНО ОТ ВЛАДЕЛЬЦА: видео-ролик для первого экрана, если нужен]
 -->
 <section class="hero" aria-label="Главное">
-  <div class="bg"><picture>
-        <source type="image/svg+xml" srcset="images/hero.svg 800w, images/hero.svg 1440w, images/hero.svg 1920w" sizes="100vw">
-        <img src="images/hero.svg" srcset="images/hero.svg 800w, images/hero.svg 1440w, images/hero.svg 1920w" sizes="100vw" width="1920" height="1080" alt="Слот для главного фото гостевого дома «Вилла Венеция». Замените файл images/hero." fetchpriority="high">
-      </picture></div>
+  <div class="bg"><picture><source media="(max-width:700px)" type="image/webp" srcset="images/hero-mobile-800.webp 800w, images/hero-mobile-1440.webp 1440w" sizes="100vw"><source media="(max-width:700px)" type="image/jpeg" srcset="images/hero-mobile.jpg" sizes="100vw"><source type="image/webp" srcset="images/hero-800.webp 800w, images/hero-1440.webp 1440w" sizes="100vw"><img src="images/hero.jpg" width="1440" height="1080" alt="Дом «Вилла Венеция» и сад: фасад, газон и белые стулья для регистрации" fetchpriority="high"></picture></div>
   <div class="wrap">
     <div class="eyebrow">Гостевой дом · Барнаул, Пароходная, 49</div>
     <p class="sub" style="margin:0 0 18px;max-width:22em"><strong>Самый гостеприимный огромный дом в крае</strong></p>
@@ -547,6 +562,7 @@ footer .logo b{color:var(--ivory)}
     <div class="eyebrow rv">КУХНЯ ВИЛЛЫ</div>
     <h2 class="h2 rv d1" style="margin-top:22px">За штурвалом кухни — <em>наша команда.</em></h2>
     <p class="lead-approved rv d2" style="margin-top:26px">Для вашего важного события банкет приготовят постоянные повара Виллы Венеция. Они создают меню, знают свою кухню и весь ход большого праздника.</p>
+    <div class="shot-row rv d2"><figure><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками, салатами и фруктами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/food-03-800.webp 800w, images/food-03-1600.webp 1600w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/food-03.jpg" width="1600" height="2400" alt="Закуски и фрукты на банкетном столе. Фото из отзыва в 2ГИС, Полина Бодрова, 9 июля 2025" loading="lazy"></picture></figure></div>
     <div class="more rv">
       <p>Утка шеф-копчения. Духовая буженина. Ростбиф.</p>
       <p style="margin-top:12px">И другие вкусности от шефа.</p>
@@ -567,6 +583,13 @@ footer .logo b{color:var(--ivory)}
     <h2 class="h2 rv d1" style="margin-top:22px">Ваш праздник — <em>наша репутация</em></h2>
     <p class="lead-approved rv d2" style="margin-top:26px">В начале нашего пути мы несколько раз разрешали приглашать сторонние команды. И поняли простую вещь: гость не разделяет площадку, кухню и обслуживание. Если еда или подача подвели, он не вспоминает название приглашённой организации — он говорит, что его плохо накормили на Вилле Венеция.</p>
     <p class="lead rv d2" style="margin-top:16px">Поэтому сегодня банкет готовят только наши постоянные повара. Они создают меню, знают свою кухню и весь ход большого праздника. Это не ограничение для гостя, а наше решение отвечать за то, с каким впечатлением люди уедут из Венеции.</p>
+    <div class="shot-row pair rv d2"><figure><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 40vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/banquet-tent-800.webp 800w, images/banquet-tent-1600.webp 1600w" sizes="(max-width:700px) 50vw, 40vw"><img src="images/banquet-tent.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету: длинные столы и тканевый потолок" loading="lazy"></picture></figure></div>
+    <figure class="shot-row vid rv d2">
+      <video muted loop playsinline autoplay preload="metadata" poster="images/banquet-table-poster.jpg" width="720" height="1280">
+        <source src="images/banquet-table.mp4" type="video/mp4">
+      </video>
+      <figcaption>Банкетный стол, накрытый к празднику</figcaption>
+    </figure>
     <h3 class="rv" style="font-family:var(--serif);font-size:1.45rem;margin:36px 0 16px">Как складывается расчёт</h3>
     <p class="lead rv d1">Банкетное меню — от 3800 ₽ на человека. Обслуживание рассчитывается отдельно и, как правило, составляет 10% от суммы банкета. В него входят официанты и посуда. Один официант обслуживает 20–25 гостей.</p>
     <p class="lead rv d2" style="margin-top:16px">При заказе нашего банкетного меню действует скидка на аренду Виллы. Точный расчёт зависит от даты, количества гостей и выбранного меню.</p>
@@ -591,6 +614,7 @@ footer .logo b{color:var(--ivory)}
         <p class="who"><b>Людмила</b>5★ · 14 августа 2026</p>
         <p>Играли свадьбу в Вилла Венеция! <br>
         Отличное место, вкуснейшая кухня, команда супер!!! Все гости остались довольны! Сравнивали с недавней свадьбой в ресторане Барнаула, в Виннеции в миллион раз лучше) Молодожены в восторге) Поставили задачу команде и она была выполнена на 110%. Спасибо огромное Станиславу, за такое клёвое место и незабываемые эмоции)</p>
+        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 70vw, 180px"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками" loading="lazy"></picture></figure></div>
         <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 14 августа 2026</cite>
       </div>
       <div class="q rv d1" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
@@ -603,6 +627,7 @@ footer .logo b{color:var(--ivory)}
         ▫️Кухня и сервис. Здесь всё на высшем уровне. Повара — настоящие мастера своего дела. Все блюда были очень вкусными! А официанты - оперативны и внимательны к мелочам. <br>
         ▫️Развлечения. На территории есть всё для идеального отдыха: отличная баня, беседки, качели и чан. Это был отдельный вид удовольствия! </p>
         <p>«Венеция»— это место с потрясающей атмосферой и душой. Если вы ищете не просто площадку, а настоящий дом для своего праздника, где к вам отнесутся с искренним гостеприимством, — вам точно сюда!</p>
+        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 70vw, 180px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture></figure></div>
         <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 28 июня 2026</cite>
       </div>
       <div class="q rv" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
@@ -613,6 +638,7 @@ footer .logo b{color:var(--ivory)}
         В подарок получили видео нашей свадьбы сделанное Станиславом, были в восторге<br>
         Во время подготовки к свадьбе, все вопросы которые возникали Станислав решал очень быстро, объяснял на простом языке😹<br>
         Благодаря этому месту, случилась свадьба нашей мечты, спасибо огромное Станиславу и его команде❤️✨</p>
+        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/food-03-800.webp 800w, images/food-03-1600.webp 1600w" sizes="(max-width:700px) 45vw, 160px"><img src="images/food-03.jpg" width="1600" height="2400" alt="Закуски на банкетном столе" loading="lazy"></picture><figcaption>Фото из отзыва в 2ГИС</figcaption></figure><figure><picture><source type="image/webp" srcset="images/rev-polina-table-800.webp 800w, images/rev-polina-table-1600.webp 1600w" sizes="(max-width:700px) 45vw, 160px"><img src="images/rev-polina-table.jpg" width="1600" height="2400" alt="Оформленный президиум в банкетном зале" loading="lazy"></picture><figcaption>Фото из отзыва в 2ГИС</figcaption></figure></div>
         <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 9 июля 2025</cite>
       </div>
       <div class="q rv d1" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
@@ -621,6 +647,7 @@ footer .logo b{color:var(--ivory)}
         1. Само место - потрясающее, большой коттедж, уютный банкетный зал, хорошие номера. Мы искали место, где можно было по максимуму разместить на ночь гостей, так как было много приезжих - всем хватило спальных мест. Хозяин Стас веселый активный человек, всегда был на связи и помогал с вопросами. Администратор вообще прекрасная женщина, ненавязчивая (как прочитала в отзыве ниже), всегда была рядом, но ни за кем не «следила»<br>
         2. Кухня - это вообще отдельная история, все очень вкусно приготовлено, разнообразные блюда, красиво сервировано. Как и говорил Стас - губернаторский уровень🫶🏻</p>
         <p>Нам все очень понравилось, мы просто в восторге. Родители вообще не ожидали такого сервиса и уюта, так как мы планировали больше душевную вечеринку, нежели традиционную свадьбу и вилла Венеция нам помогла организовать именно то что нужно, спасибо🙌🏻🌺</p>
+        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/stay-720.webp 720w" sizes="(max-width:700px) 70vw, 180px"><img src="images/stay.jpg" width="720" height="1280" alt="Одна из комнат для гостей" loading="lazy"></picture></figure></div>
         <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 5 октября 2025</cite>
       </div>
       <div class="q rv" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
@@ -629,6 +656,7 @@ footer .logo b{color:var(--ivory)}
         <p>Огромное спасибо Ирине за чёткую организацию и душевное отношение, а Станиславу — за гостеприимство и тёплый приём. Всё было на высшем уровне: вкуснейшая еда, комфортное размещение, а на второй день — божественная баня с чаном! 🔥</p>
         <p>Отдельное спасибо за то, что всё в одном комплексе и цена — просто отличная за такие условия! Однозначно 5 из 5. </p>
         <p>Желаем процветания, новых ярких событий, добрых гостей и побольше счастливых улыбок. 🤍</p>
+        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="(max-width:700px) 70vw, 180px"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture></figure></div>
         <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 29 июля 2026</cite>
       </div>
     </div>
@@ -642,6 +670,9 @@ footer .logo b{color:var(--ivory)}
 <section class="cover" id="second-day">
   <div class="wrap">
     <h2 class="h2 rv d1">ВТОРОЙ ДЕНЬ И МАНГАЛ</h2>
+    <figure class="rv d2" style="margin:28px 0 0;max-width:640px;border-radius:14px;overflow:hidden">
+      <picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 100vw, 640px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег — место для второго дня" loading="lazy"></picture>
+    </figure>
     <p class="lead-approved rv d2" style="margin-top:26px;max-width:52rem">После банкета мы сохраним нетронутые закуски в гостевом холодильнике. На второй день Большая кухня — для разогрева и сервировки, а мангальная зона полностью в вашем распоряжении — здесь можно готовить самостоятельно.</p>
   </div>
 </section>
@@ -741,11 +772,8 @@ footer .logo b{color:var(--ivory)}
       </form>
       <aside class="result rv d1" aria-label="Ваш праздник">
         <div class="ph">
-          <picture>
-        <source type="image/svg+xml" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="(max-width:980px) 100vw, 40vw">
-        <img id="rimg" src="images/hall.svg" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="(max-width:980px) 100vw, 40vw" width="1440" height="1080" alt="Слот фото для превью праздника" loading="lazy">
-      </picture>
-          <img id="rimg2" class="hide" src="images/house.svg" width="1440" height="1080" alt="" loading="lazy">
+          <picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:980px) 100vw, 40vw"><img id="rimg" src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture>
+          <img id="rimg2" class="hide" src="images/banquet-tent.jpg" width="1600" height="1067" alt="" loading="lazy">
           <span id="rcap">Банкетный зал</span>
         </div>
         <div class="bd">
@@ -769,11 +797,8 @@ footer .logo b{color:var(--ivory)}
 <section class="paper place" id="place">
   <div class="wrap grid">
     <figure class="pic rv" style="margin:0">
-      <picture>
-        <source type="image/svg+xml" srcset="images/territory.svg 800w, images/territory.svg 1200w" sizes="(max-width:900px) 100vw, 50vw">
-        <img src="images/territory.svg" srcset="images/territory.svg 800w, images/territory.svg 1200w" sizes="(max-width:900px) 100vw, 50vw" width="1200" height="1600" alt="Слот для фото территории гостевого дома. Замените файл images/territory." loading="lazy">
-      </picture>
-      <figcaption>Слот «территория» — замените фотографией владельца</figcaption>
+      <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:900px) 100vw, 50vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом «Вилла Венеция»: дорожка, газон и стулья для регистрации" loading="lazy"></picture>
+      
     </figure>
     <div>
       <div class="eyebrow rv">Место и масштаб</div>
@@ -789,14 +814,8 @@ footer .logo b{color:var(--ivory)}
         <li>Мангальная зона — в вашем распоряжении</li>
       </ul>
       <div class="duo rv">
-        <picture>
-        <source type="image/svg+xml" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="(max-width:900px) 50vw, 25vw">
-        <img src="images/house.svg" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="(max-width:900px) 50vw, 25vw" width="1440" height="1080" alt="Слот для фото дома. Замените файл images/house." loading="lazy">
-      </picture>
-        <picture>
-        <source type="image/svg+xml" srcset="images/gazebo.svg 800w, images/gazebo.svg 1200w" sizes="(max-width:900px) 50vw, 25vw">
-        <img src="images/gazebo.svg" srcset="images/gazebo.svg 800w, images/gazebo.svg 1200w" sizes="(max-width:900px) 50vw, 25vw" width="1200" height="1500" alt="Слот для фото беседки. Замените файл images/gazebo." loading="lazy">
-      </picture>
+        <picture><source type="image/webp" srcset="images/house-800.webp 800w, images/house-1600.webp 1600w" sizes="(max-width:900px) 50vw, 25vw"><img src="images/house.jpg" width="1600" height="2133" alt="Фасад гостевого дома «Вилла Венеция»" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="images/gazebo-800.webp 800w, images/gazebo-1600.webp 1600w" sizes="(max-width:900px) 50vw, 25vw"><img src="images/gazebo.jpg" width="1600" height="2242" alt="Беседка на территории «Виллы Венеция»" loading="lazy"></picture>
       </div>
     </div>
   </div>
@@ -818,10 +837,7 @@ footer .logo b{color:var(--ivory)}
     <div class="stick">
       <div class="track" id="track">
         <article class="panel-d">
-          <picture>
-        <source type="image/svg+xml" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="100vw">
-        <img src="images/gallery-05.svg" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="100vw" width="1200" height="1500" alt="Слот: выездная регистрация на территории. Замените файл images/gallery-05." loading="lazy">
-      </picture>
+          <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="100vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture>
           <div class="tx">
             <div class="k">I · День</div>
             <h3>Заезд и регистрация</h3>
@@ -829,10 +845,7 @@ footer .logo b{color:var(--ivory)}
           </div>
         </article>
         <article class="panel-d">
-          <picture>
-        <source type="image/svg+xml" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="100vw">
-        <img src="images/hall.svg" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="100vw" width="1440" height="1080" alt="Слот: банкетный зал. Замените файл images/hall." loading="lazy">
-      </picture>
+          <picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="100vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture>
           <div class="tx">
             <div class="k">II · Вечер</div>
             <h3>Застолье в зале до&nbsp;40</h3>
@@ -840,10 +853,7 @@ footer .logo b{color:var(--ivory)}
           </div>
         </article>
         <article class="panel-d">
-          <picture>
-        <source type="image/svg+xml" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="100vw">
-        <img src="images/house.svg" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="100vw" width="1440" height="1080" alt="Слот: дом и номера. Замените файл images/house." loading="lazy">
-      </picture>
+          <picture><source type="image/webp" srcset="images/stay-720.webp 720w" sizes="100vw"><img src="images/stay.jpg" width="720" height="1280" alt="Комната для гостей в доме" loading="lazy"></picture>
           <div class="tx">
             <div class="k">III · Ночь</div>
             <h3>Остаться в доме</h3>
@@ -851,10 +861,7 @@ footer .logo b{color:var(--ivory)}
           </div>
         </article>
         <article class="panel-d">
-          <picture>
-        <source type="image/svg+xml" srcset="images/chan.svg 800w, images/chan.svg 1200w" sizes="100vw">
-        <img src="images/chan.svg" srcset="images/chan.svg 800w, images/chan.svg 1200w" sizes="100vw" width="1200" height="1600" alt="Слот: чан. Замените файл images/chan." loading="lazy">
-      </picture>
+          <picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="100vw"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture>
           <div class="tx">
             <div class="k">IV · Баня и чан</div>
             <h3>Если захотите пар</h3>
@@ -862,10 +869,7 @@ footer .logo b{color:var(--ivory)}
           </div>
         </article>
         <article class="panel-d">
-          <picture>
-        <source type="image/svg+xml" srcset="images/territory.svg 800w, images/territory.svg 1200w" sizes="100vw">
-        <img src="images/territory.svg" srcset="images/territory.svg 800w, images/territory.svg 1200w" sizes="100vw" width="1200" height="1600" alt="Слот: утро на территории. Замените файл images/territory." loading="lazy">
-      </picture>
+          <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="100vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом «Вилла Венеция»: дорожка, газон и стулья для регистрации" loading="lazy"></picture>
           <div class="tx">
             <div class="k">V · Утро</div>
             <h3>Останься — завтра будет ещё теплее</h3>
@@ -889,19 +893,7 @@ footer .logo b{color:var(--ivory)}
 -->
 <section class="spa" id="spa">
   <div class="wrap grid">
-    <div class="mosaic rv">
-      <picture>
-        <source type="image/svg+xml" srcset="images/chan.svg 800w, images/chan.svg 1200w" sizes="(max-width:900px) 100vw, 30vw">
-        <img src="images/chan.svg" srcset="images/chan.svg 800w, images/chan.svg 1200w" sizes="(max-width:900px) 100vw, 30vw" width="1200" height="1600" alt="Слот: банный чан. Замените файл images/chan." loading="lazy">
-      </picture>
-      <picture>
-        <source type="image/svg+xml" srcset="images/bath.svg 800w, images/bath.svg 1200w" sizes="(max-width:900px) 50vw, 20vw">
-        <img src="images/bath.svg" srcset="images/bath.svg 800w, images/bath.svg 1200w" sizes="(max-width:900px) 50vw, 20vw" width="1200" height="1600" alt="Слот: баня. Замените файл images/bath." loading="lazy">
-      </picture>
-      <picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-04.svg 800w, images/gallery-w-04.svg 900w" sizes="(max-width:900px) 50vw, 20vw">
-        <img src="images/gallery-w-04.svg" srcset="images/gallery-w-04.svg 800w, images/gallery-w-04.svg 900w" sizes="(max-width:900px) 50vw, 20vw" width="900" height="1200" alt="Слот: чан, зимний кадр. Замените файл images/gallery-w-04." loading="lazy">
-      </picture>
+    <div class="mosaic rv"><picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="(max-width:900px) 100vw, 30vw"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture><picture><source type="image/webp" srcset="images/bath-800.webp 800w, images/bath-1600.webp 1600w" sizes="(max-width:900px) 50vw, 20vw"><img src="images/bath.jpg" width="1600" height="903" alt="Чан: вид сверху" loading="lazy"></picture><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:900px) 50vw, 20vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом на территории" loading="lazy"></picture>
     </div>
     <div>
       <div class="eyebrow rv">Баня и чан</div>
@@ -935,26 +927,11 @@ footer .logo b{color:var(--ivory)}
       <p class="lead rv d2" style="max-width:420px">Свадьба, юбилей, корпоратив, день рождения, отдых с друзьями. Выпускные — только с ответственным взрослым.</p>
     </div>
     <div class="rowx">
-      <article class="oc rv"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="330px">
-        <img src="images/gallery-05.svg" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="330px" width="1200" height="1500" alt="Слот: свадьба" loading="lazy">
-      </picture><div class="tx"><h3>Свадьба</h3><p class="fact">Зона регистрации с пирсом и аркой, зал до 40, ночёвка в доме, второй день без лишних заморочек.</p></div></article>
-      <article class="oc rv d1"><picture>
-        <source type="image/svg+xml" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="330px">
-        <img src="images/hall.svg" srcset="images/hall.svg 800w, images/hall.svg 1440w" sizes="330px" width="1440" height="1080" alt="Слот: юбилей" loading="lazy">
-      </picture><div class="tx"><h3>Юбилей</h3><p class="fact">Зал, дом и территория в одном месте. Банкетное меню — от 3&nbsp;800&nbsp;₽ с человека.</p></div></article>
-      <article class="oc rv d2"><picture>
-        <source type="image/svg+xml" srcset="images/guests.svg 800w, images/guests.svg 1440w" sizes="330px">
-        <img src="images/guests.svg" srcset="images/guests.svg 800w, images/guests.svg 1440w" sizes="330px" width="1440" height="1080" alt="Слот: корпоратив" loading="lazy">
-      </picture><div class="tx"><h3>Корпоратив</h3><p class="fact">Беседка до 20, банкетный зал до 40, шатёр до 80 — на любую компанию. Парковка до 30 машин.</p></div></article>
-      <article class="oc rv d3"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-08.svg 800w, images/gallery-08.svg 1440w" sizes="330px">
-        <img src="images/gallery-08.svg" srcset="images/gallery-08.svg 800w, images/gallery-08.svg 1440w" sizes="330px" width="1440" height="1080" alt="Слот: выпускной" loading="lazy">
-      </picture><div class="tx"><h3>Выпускной</h3><p class="fact">Только с ответственным взрослым.</p></div></article>
-      <article class="oc rv"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-07.svg 800w, images/gallery-07.svg 1000w" sizes="330px">
-        <img src="images/gallery-07.svg" srcset="images/gallery-07.svg 800w, images/gallery-07.svg 1000w" sizes="330px" width="1000" height="1300" alt="Слот: отдых с друзьями" loading="lazy">
-      </picture><div class="tx"><h3>Отдых с друзьями</h3><p class="fact">Дом, мангальная зона, при желании — баня с чаном как доп.</p></div></article>
+      <article class="oc rv"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="330px"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture><div class="tx"><h3>Свадьба</h3><p class="fact">Зона регистрации с пирсом и аркой, зал до 40, ночёвка в доме, второй день без лишних заморочек.</p></div></article>
+      <article class="oc rv d1"><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="330px"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture><div class="tx"><h3>Юбилей</h3><p class="fact">Зал, дом и территория в одном месте. Банкетное меню — от 3&nbsp;800&nbsp;₽ с человека.</p></div></article>
+      <article class="oc rv d2"><picture><source type="image/webp" srcset="images/guests-800.webp 800w, images/guests-1600.webp 1600w" sizes="330px"><img src="images/guests.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету" loading="lazy"></picture><div class="tx"><h3>Корпоратив</h3><p class="fact">Беседка до 20, банкетный зал до 40, шатёр до 80 — на любую компанию. Парковка до 30 машин.</p></div></article>
+      <article class="oc rv d3"><picture><source type="image/webp" srcset="images/entrance-720.webp 720w" sizes="330px"><img src="images/entrance.jpg" width="720" height="1280" alt="Вход, оформленный к торжеству" loading="lazy"></picture><div class="tx"><h3>Выпускной</h3><p class="fact">Только с ответственным взрослым.</p></div></article>
+      <article class="oc rv"><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="330px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture><div class="tx"><h3>Отдых с друзьями</h3><p class="fact">Дом, мангальная зона, при желании — баня с чаном как доп.</p></div></article>
     </div>
   </div>
 </section>
@@ -978,66 +955,16 @@ footer .logo b{color:var(--ivory)}
     </div>
     <p class="lead rv" style="margin:-12px 0 28px">Пока здесь плейсхолдеры. Положите фото владельца в папку <code>images/</code> с теми же именами — смотрите <code>images/README.md</code>. [НУЖНО ОТ ВЛАДЕЛЬЦА: 12–15 фото: дом, зал, территория, баня и чан, гости]</p>
     <div class="ggrid" id="ggrid">
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-01.svg 800w, images/gallery-01.svg 1440w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-01.svg" srcset="images/gallery-01.svg 800w, images/gallery-01.svg 1440w" sizes="(max-width:700px) 50vw, 33vw" width="1440" height="1080" alt="Слот галереи 01, лето, дом" loading="lazy">
-      </picture><figcaption>gallery-01 · дом</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-02.svg 800w, images/gallery-02.svg 1000w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-02.svg" srcset="images/gallery-02.svg 800w, images/gallery-02.svg 1000w" sizes="(max-width:700px) 50vw, 33vw" width="1000" height="1400" alt="Слот галереи 02, лето, территория" loading="lazy">
-      </picture><figcaption>gallery-02 · территория</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-03.svg 800w, images/gallery-03.svg 1200w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-03.svg" srcset="images/gallery-03.svg 800w, images/gallery-03.svg 1200w" sizes="(max-width:700px) 50vw, 33vw" width="1200" height="900" alt="Слот галереи 03, лето, зал" loading="lazy">
-      </picture><figcaption>gallery-03 · зал</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-04.svg 800w, images/gallery-04.svg 1000w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-04.svg" srcset="images/gallery-04.svg 800w, images/gallery-04.svg 1000w" sizes="(max-width:700px) 50vw, 33vw" width="1000" height="1300" alt="Слот галереи 04, лето, беседка" loading="lazy">
-      </picture><figcaption>gallery-04 · беседка</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-05.svg" srcset="images/gallery-05.svg 800w, images/gallery-05.svg 1200w" sizes="(max-width:700px) 50vw, 33vw" width="1200" height="1500" alt="Слот галереи 05, лето, регистрация" loading="lazy">
-      </picture><figcaption>gallery-05 · регистрация</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-06.svg 800w, images/gallery-06.svg 1440w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-06.svg" srcset="images/gallery-06.svg 800w, images/gallery-06.svg 1440w" sizes="(max-width:700px) 50vw, 33vw" width="1440" height="960" alt="Слот галереи 06, лето, шатёр" loading="lazy">
-      </picture><figcaption>gallery-06 · шатёр</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-07.svg 800w, images/gallery-07.svg 1000w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-07.svg" srcset="images/gallery-07.svg 800w, images/gallery-07.svg 1000w" sizes="(max-width:700px) 50vw, 33vw" width="1000" height="1300" alt="Слот галереи 07, лето, мангал" loading="lazy">
-      </picture><figcaption>gallery-07 · мангал</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-08.svg 800w, images/gallery-08.svg 1440w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-08.svg" srcset="images/gallery-08.svg 800w, images/gallery-08.svg 1440w" sizes="(max-width:700px) 50vw, 33vw" width="1440" height="1080" alt="Слот галереи 08, лето, гости" loading="lazy">
-      </picture><figcaption>gallery-08 · гости</figcaption></figure>
-      <figure data-s="s"><picture>
-        <source type="image/svg+xml" srcset="images/gallery-09.svg 800w, images/gallery-09.svg 900w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-09.svg" srcset="images/gallery-09.svg 800w, images/gallery-09.svg 900w" sizes="(max-width:700px) 50vw, 33vw" width="900" height="1400" alt="Слот галереи 09, лето, стол" loading="lazy">
-      </picture><figcaption>gallery-09 · стол</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-01.svg 800w, images/gallery-w-01.svg 1440w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-01.svg" srcset="images/gallery-w-01.svg 800w, images/gallery-w-01.svg 1440w" sizes="(max-width:700px) 50vw, 33vw" width="1440" height="1080" alt="Слот галереи, зима, дом" loading="lazy">
-      </picture><figcaption>gallery-w-01 · зима, дом</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-02.svg 800w, images/gallery-w-02.svg 1100w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-02.svg" srcset="images/gallery-w-02.svg 800w, images/gallery-w-02.svg 1100w" sizes="(max-width:700px) 50vw, 33vw" width="1100" height="1400" alt="Слот галереи, зима, зал" loading="lazy">
-      </picture><figcaption>gallery-w-02 · зима, зал</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-03.svg 800w, images/gallery-w-03.svg 1440w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-03.svg" srcset="images/gallery-w-03.svg 800w, images/gallery-w-03.svg 1440w" sizes="(max-width:700px) 50vw, 33vw" width="1440" height="1080" alt="Слот галереи, зима, двор" loading="lazy">
-      </picture><figcaption>gallery-w-03 · зима, двор</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-04.svg 800w, images/gallery-w-04.svg 900w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-04.svg" srcset="images/gallery-w-04.svg 800w, images/gallery-w-04.svg 900w" sizes="(max-width:700px) 50vw, 33vw" width="900" height="1200" alt="Слот галереи, зима, чан" loading="lazy">
-      </picture><figcaption>gallery-w-04 · зима, чан</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-05.svg 800w, images/gallery-w-05.svg 1000w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-05.svg" srcset="images/gallery-w-05.svg 800w, images/gallery-w-05.svg 1000w" sizes="(max-width:700px) 50vw, 33vw" width="1000" height="1400" alt="Слот галереи, зима, холл" loading="lazy">
-      </picture><figcaption>gallery-w-05 · зима, холл</figcaption></figure>
-      <figure data-s="w" hidden><picture>
-        <source type="image/svg+xml" srcset="images/gallery-w-06.svg 800w, images/gallery-w-06.svg 1200w" sizes="(max-width:700px) 50vw, 33vw">
-        <img src="images/gallery-w-06.svg" srcset="images/gallery-w-06.svg 800w, images/gallery-w-06.svg 1200w" sizes="(max-width:700px) 50vw, 33vw" width="1200" height="1000" alt="Слот галереи, зима, банкет" loading="lazy">
-      </picture><figcaption>gallery-w-06 · зима, банкет</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/facade-512.webp 512w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/facade.jpg" width="512" height="417" alt="Дневной фасад «Виллы Венеция» со стороны дороги" loading="lazy"></picture><figcaption>Дневной фасад</figcaption></figure><figure data-s="s"><picture><source type="image/webp" srcset="images/hero-mobile-800.webp 800w, images/hero-mobile-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hero-mobile.jpg" width="1440" height="2560" alt="Дом «Вилла Венеция»: фасад, белые стулья на газоне и беседка" loading="lazy"></picture><figcaption>Дом и сад</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом: газон, дорожка и стулья для регистрации" loading="lazy"></picture><figcaption>Сад и зона регистрации</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал с накрытыми столами" loading="lazy"></picture><figcaption>Банкетный зал</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/gazebo-800.webp 800w, images/gazebo-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gazebo.jpg" width="1600" height="2242" alt="Беседка на территории" loading="lazy"></picture><figcaption>Беседка</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture><figcaption>Зона регистрации</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/banquet-tent-800.webp 800w, images/banquet-tent-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/banquet-tent.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету" loading="lazy"></picture><figcaption>Шатёр к банкету</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture><figcaption>Территория и беседка</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/entrance-720.webp 720w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/entrance.jpg" width="720" height="1280" alt="Вход, оформленный к торжеству" loading="lazy"></picture><figcaption>Вход к торжеству</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками и фруктами" loading="lazy"></picture><figcaption>Банкетный стол</figcaption></figure>
+      <figure data-s="w" hidden><p class="lead" style="padding:28px 8px">Зимние фотографии дома появятся здесь позже.</p></figure>
     </div>
   </div>
 </section>
@@ -1078,13 +1005,17 @@ footer .logo b{color:var(--ivory)}
   (в) Сознательно не написал: «5 минут от центра», «шаговая доступность», «800 м / 840 м», «Затон», «пешком от остановки», телефон из образца, «круглосуточно»
 -->
 <section class="way" id="way">
-  <div class="bg"><picture>
-        <source type="image/svg+xml" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="100vw">
-        <img src="images/house.svg" srcset="images/house.svg 800w, images/house.svg 1440w" sizes="100vw" width="1440" height="1080" alt="Слот фона: дом. Замените файл images/house." loading="lazy">
-      </picture></div>
+  <div class="bg"><picture><source type="image/webp" srcset="images/house-800.webp 800w, images/house-1600.webp 1600w" sizes="100vw"><img src="images/house.jpg" width="1600" height="2133" alt="Фасад гостевого дома «Вилла Венеция»" loading="lazy"></picture></div>
   <div class="wrap">
     <div class="eyebrow rv">Как добраться</div>
     <h2 class="h2 rv d1">Барнаул, <em>Пароходная,&nbsp;49</em></h2>
+    <figure class="map-card rv d2">
+      <a href="images/route-map.jpg" target="_blank" rel="noopener" title="Открыть карту проезда в полном размере">
+        <picture><source type="image/webp" srcset="images/route-map-800.webp 800w, images/route-map-1290.webp 1290w" sizes="(max-width:700px) 100vw, 400px"><img src="images/route-map.jpg" width="1290" height="1739" alt="Карта проезда к «Вилле Венеция»: Барнаул, Пароходная, 49" loading="lazy"></picture>
+      </a>
+      <figcaption>Карта проезда — нажмите, чтобы открыть полностью</figcaption>
+    </figure>
+
     <dl class="rv d2">
       <dt>Адрес</dt><dd>Барнаул, ул. Пароходная, 49</dd>
       <dt>От ЦУМа</dt><dd>≈ 20 минут</dd>
@@ -1219,12 +1150,12 @@ footer .logo b{color:var(--ivory)}
   var f=$('#bf'), gn=$('#gn'), gno=$('#gno'), dt=$('#dt');
   var t=new Date(); dt.min=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
   var PH={
-    'Свадьба':{s:['images/gallery-05.svg','Выездная регистрация'],w:['images/gallery-w-02.svg','Зал зимой']},
-    'Юбилей':{s:['images/hall.svg','Банкетный зал'],w:['images/gallery-w-06.svg','Банкет зимой']},
-    'Корпоратив':{s:['images/guests.svg','Компания на территории'],w:['images/gallery-w-01.svg','Дом зимой']},
-    'Выпускной':{s:['images/gallery-08.svg','Гости'],w:['images/gallery-w-05.svg','Холл']},
-    'День рождения':{s:['images/gallery-07.svg','Мангальная зона'],w:['images/gallery-w-04.svg','Чан']},
-    'Отдых с друзьями':{s:['images/chan.svg','Чан'],w:['images/gallery-w-03.svg','Двор зимой']}
+    'Свадьба':{s:['images/territory.jpg','Зона регистрации'],w:['images/hall.jpg','Банкетный зал']},
+    'Юбилей':{s:['images/hall.jpg','Банкетный зал'],w:['images/banquet-tent.jpg','Шатёр']},
+    'Корпоратив':{s:['images/guests.jpg','Шатёр к банкету'],w:['images/house.jpg','Фасад дома']},
+    'Выпускной':{s:['images/entrance.jpg','Оформленный вход'],w:['images/hall.jpg','Банкетный зал']},
+    'День рождения':{s:['images/territory-river.jpg','Территория и беседка'],w:['images/chan.jpg','Чан']},
+    'Отдых с друзьями':{s:['images/chan.jpg','Чан'],w:['images/stay.jpg','Комната для гостей']}
   };
   var rimg=$('#rimg'), rimg2=$('#rimg2'), cur=rimg ? rimg.getAttribute('src') : '';
   function swap(src){
