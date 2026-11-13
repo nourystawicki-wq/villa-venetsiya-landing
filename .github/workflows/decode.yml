@@ -1,0 +1,47 @@
+name: Decode base64 images
+
+on:
+  push:
+    paths:
+      - '_b64/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Decode _b64 files, remove the staging tree, and push
+        run: |
+          set -euo pipefail
+          if [ ! -d _b64 ]; then
+            echo "No _b64 directory; nothing to decode."
+            exit 0
+          fi
+
+          find _b64 -type f -name '*.b64' -print | sort | while IFS= read -r f; do
+            rel="${f#_b64/}"
+            dest="${rel%.b64}"
+            mkdir -p "$(dirname "$dest")"
+            base64 -d "$f" > "$dest"
+            echo "decoded $f -> $dest ($(wc -c < "$dest") bytes)"
+          done
+
+          git rm -r _b64
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Decode uploaded base64 images into place"
+          git push
