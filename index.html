@@ -129,11 +129,13 @@ section{position:relative;padding:clamp(84px,11vw,140px) 0}
 @keyframes iw{to{width:min(320px,70vw)}}
 
 /* шапка */
-#top{position:fixed;inset:0 0 auto;z-index:50;transition:background-color .3s,border-color .3s,color .3s;border-bottom:1px solid transparent;background:rgba(255,250,240,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom-color:rgba(29,27,22,.08)}
-#top .logo b{color:var(--ink)}
-#top nav a{color:var(--txm)}
-#top nav a:hover{color:var(--ink)}
+#top{position:fixed;inset:0 0 auto;z-index:50;transition:background-color .3s,border-color .3s,color .3s;border-bottom:1px solid transparent;background:transparent}
+#top .logo b{color:var(--ivory);text-shadow:0 1px 10px rgba(0,0,0,.55)}
+#top .logo span{text-shadow:0 1px 8px rgba(0,0,0,.5)}
+#top nav a{color:rgba(242,235,221,.86);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+#top nav a:hover{color:var(--ivory)}
 #top.solid{background:rgba(13,26,23,.94);border-color:var(--line)}
+#top.solid .logo b,#top.solid .logo span,#top.solid nav a{text-shadow:none}
 #top.solid .logo b{color:var(--ivory)}
 #top.solid nav a{color:var(--mut)}
 #top.solid nav a:hover{color:var(--ivory)}
@@ -149,27 +151,28 @@ section{position:relative;padding:clamp(84px,11vw,140px) 0}
 @media (max-width:420px){#top .btn span{display:none}#top .btn{width:44px;padding:0}}
 
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:110px 0 clamp(40px,7vh,84px);overflow:hidden}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-start;justify-content:flex-end;padding:110px 8px 48px;overflow:hidden}
 .hero .bg{position:absolute;inset:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:42% 50%;transform:scale(1.06);animation:kb 14s var(--ease) forwards;filter:brightness(1.06) saturate(1.08)}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:26% 50%;transform:scale(1.04);animation:kb 14s var(--ease) forwards}
 @keyframes kb{to{transform:scale(1)}}
-.hero .wrap{position:relative}
-.hero-panel{max-width:min(680px,100%);padding:22px 28px 20px;border-radius:24px;background:rgba(255,250,240,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 18px 50px rgba(40,28,10,.14);color:var(--tx)}
-.hero .eyebrow{margin-bottom:14px;color:#9a6a26}
-.hero .eyebrow,.hero h1,.hero .sub{text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.hero h1{font-size:clamp(44px,6.6vw,92px);max-width:14ch;color:var(--ink)}
-.hero h1 em{font-style:normal;color:#9a5b1e}
+.hero .wrap{position:relative;display:flex;justify-content:flex-end}
+.hero-copy{position:relative;max-width:min(480px,34vw);padding:8px 0 8px 16px;color:var(--ivory)}
+.hero-copy:before{content:"";position:absolute;inset:-28px -36px -36px -48px;background:radial-gradient(ellipse at 75% 35%,rgba(10,16,24,.4) 0%,rgba(10,16,24,.16) 52%,rgba(10,16,24,0) 76%);pointer-events:none;z-index:-1}
+.hero .eyebrow{margin-bottom:16px;color:var(--gold2);white-space:nowrap}
+.hero .eyebrow,.hero h1,.hero .sub,.hero .meta,.hero .wa-need{text-shadow:0 2px 18px rgba(8,12,16,.75),0 1px 2px rgba(8,12,16,.85)}
+.hero h1{font-size:clamp(40px,4.8vw,72px);max-width:11ch;color:var(--ivory)}
+.hero h1 em{font-style:normal;color:var(--gold2)}
 .hero h1 .w{display:inline-block;opacity:0;transform:translateY(.4em);animation:iu 1s var(--ease) forwards;animation-delay:calc(var(--d,.2s) + var(--i,0) * .07s)}
-.hero .eyebrow+.sub{margin:0 0 12px!important}
-.hero .sub{margin-top:16px;max-width:580px;font-size:18px;color:var(--tx)}
-.hero .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-.hero .btn-line{color:var(--tx);border-color:rgba(29,27,22,.28);background:rgba(255,255,255,.6)}
-.hero .btn-line:hover{border-color:var(--tx);background:#fff}
-.hero .wa-need{color:#9a6a26}
-.hero .meta{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:20px;padding-top:16px;border-top:1px solid var(--pline);max-width:760px;font-size:14.5px;color:var(--txm)}
-.hero .meta b{font:400 26px/1 var(--serif);color:var(--ink);margin-right:8px}
+.hero .eyebrow+.sub{margin:0 0 14px!important}
+.hero .sub{margin-top:16px;max-width:540px;font-size:18px;color:#f0e8d6}
+.hero .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .btn-line{color:var(--ivory);border-color:var(--line2);background:rgba(13,20,28,.35)}
+.hero .btn-line:hover{border-color:var(--ivory);background:rgba(13,20,28,.5)}
+.hero .wa-need{color:var(--gold2)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line2);max-width:540px;font-size:14.5px;color:#efe6d4}
+.hero .meta b{font:400 26px/1 var(--serif);color:var(--ivory);margin-right:8px}
 .hero .meta .it{display:flex;align-items:baseline}
-.hero .stars{color:#c4923a}
+.hero .stars{color:var(--gold2)}
 .live{display:inline-flex;align-items:center;gap:9px}
 .live i{width:8px;height:8px;border-radius:50%;background:#7fd19b;box-shadow:0 0 0 0 rgba(127,209,155,.6);animation:pl 2.4s infinite}
 @keyframes pl{70%{box-shadow:0 0 0 9px rgba(127,209,155,0)}100%{box-shadow:0 0 0 0 rgba(127,209,155,0)}}
@@ -457,7 +460,8 @@ footer .logo b{color:var(--ivory)}
 .way .map-card a{display:block;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)}
 .way .map-card img{width:100%;height:auto;display:block}
 .way .map-card figcaption{padding:8px 2px 0;font:500 13px/1.35 var(--sans);color:#efe6d4}
-@media (max-width:700px){.hero{padding:86px 0 16px}.hero .bg img{object-position:50% 42%}.hero-panel{padding:16px 16px 14px;background:rgba(255,250,240,.86)}.hero h1{font-size:clamp(34px,9.2vw,44px)}.hero .sub{margin-top:12px;font-size:16px}.hero .row{margin-top:16px}.hero .meta{margin-top:14px;padding-top:12px}.hero .eyebrow{margin-bottom:10px}}
+@media (min-width:701px) and (max-height:850px){.hero{padding:96px 8px 24px;align-items:center}.hero h1{font-size:clamp(36px,4.2vw,60px)}.hero .sub{margin-top:10px;font-size:16px}.hero .row{margin-top:14px}.hero .meta{margin-top:12px;padding-top:10px}.hero .eyebrow{margin-bottom:10px}}
+@media (max-width:700px){.hero .eyebrow{white-space:normal}.hero{align-items:flex-end;justify-content:flex-start;padding:86px 0 18px}.hero .wrap{justify-content:flex-start}.hero .bg img{object-position:50% 26%}.hero-copy{max-width:100%;padding:8px 0 0}.hero-copy:before{inset:-12px -16px -20px -16px;background:linear-gradient(180deg,rgba(10,16,24,0) 0%,rgba(10,16,24,.22) 40%,rgba(10,16,24,.4) 100%)}.hero h1{font-size:clamp(28px,7.6vw,36px);max-width:14ch}.hero .sub{margin-top:8px;font-size:15px}.hero .row{margin-top:12px}.hero .hero-copy .btn{min-height:46px}.hero .meta{margin-top:10px;padding-top:10px;max-width:100%}.hero .eyebrow{margin-bottom:8px}}
 
 </style>
 <!--
@@ -518,7 +522,7 @@ footer .logo b{color:var(--ivory)}
 <section class="hero" aria-label="Главное">
   <div class="bg"><picture><source media="(max-width:700px)" type="image/webp" srcset="images/hero-m.webp 405w" sizes="100vw"><source media="(max-width:700px)" type="image/jpeg" srcset="images/hero-m.jpg" sizes="100vw"><source type="image/webp" srcset="images/hero-800.webp 800w, images/hero-1440.webp 1280w" sizes="100vw"><img src="images/hero.jpg" width="1280" height="720" alt="Дом «Вилла Венеция» и сад: фасад, газон и белые стулья для регистрации" fetchpriority="high"></picture></div>
   <div class="wrap">
-    <div class="hero-panel">
+    <div class="hero-copy">
     <div class="eyebrow">Гостевой дом · Барнаул, Пароходная, 49</div>
     <p class="sub" style="margin:0 0 18px;max-width:22em"><strong>Самый гостеприимный огромный дом в крае</strong></p>
     <h1><span class="w" style="--i:0">Весь</span> <span class="w" style="--i:1">праздник —</span> <span class="w" style="--i:2"><em>в одном</em></span> <span class="w" style="--i:3"><em>доме</em></span></h1>
@@ -968,7 +972,7 @@ footer .logo b{color:var(--ivory)}
     </div>
     <p class="lead rv" style="margin:-12px 0 28px">Пока здесь плейсхолдеры. Положите фото владельца в папку <code>images/</code> с теми же именами — смотрите <code>images/README.md</code>. [НУЖНО ОТ ВЛАДЕЛЬЦА: 12–15 фото: дом, зал, территория, баня и чан, гости]</p>
     <div class="ggrid" id="ggrid">
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/facade-512.webp 512w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/facade.jpg" width="512" height="417" alt="Дневной фасад «Виллы Венеция» со стороны дороги" loading="lazy"></picture><figcaption>Дневной фасад</figcaption></figure><figure data-s="s"><picture><source type="image/webp" srcset="images/hero-mobile-800.webp 800w, images/hero-mobile-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hero-mobile.jpg" width="1440" height="2560" alt="Дом «Вилла Венеция»: фасад, белые стулья на газоне и беседка" loading="lazy"></picture><figcaption>Дом и сад</figcaption></figure>
+      <figure data-s="s"><picture><source type="image/webp" srcset="images/day-facade-800.webp 800w, images/day-facade-1280.webp 1280w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/day-facade.jpg" width="1280" height="720" alt="Дневной фасад «Виллы Венеция» со стороны дороги" loading="lazy"></picture><figcaption>Дневной фасад</figcaption></figure><figure data-s="s"><picture><source type="image/webp" srcset="images/hero-mobile-800.webp 800w, images/hero-mobile-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hero-mobile.jpg" width="1440" height="2560" alt="Дом «Вилла Венеция»: фасад, белые стулья на газоне и беседка" loading="lazy"></picture><figcaption>Дом и сад</figcaption></figure>
       <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом: газон, дорожка и стулья для регистрации" loading="lazy"></picture><figcaption>Сад и зона регистрации</figcaption></figure>
       <figure data-s="s"><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал с накрытыми столами" loading="lazy"></picture><figcaption>Банкетный зал</figcaption></figure>
       <figure data-s="s"><picture><source type="image/webp" srcset="images/gazebo-800.webp 800w, images/gazebo-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gazebo.jpg" width="1600" height="2242" alt="Беседка на территории" loading="lazy"></picture><figcaption>Беседка</figcaption></figure>
