@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: decode-b64
+  cancel-in-progress: false
+
 jobs:
   decode:
     runs-on: ubuntu-latest
@@ -17,13 +21,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
-      - name: Decode _b64 files, remove the staging tree, and push
+      - name: Decode _b64 files / bundle, remove the staging tree, and push
         run: |
           set -euo pipefail
+          git pull --ff-only origin main || true
           if [ ! -d _b64 ]; then
             echo "No _b64 directory; nothing to decode."
             exit 0
+          fi
+
+          # Multi-part tar bundle: _b64/bundle/partNN + _b64/bundle/count + _b64/bundle/sha256
+          if [ -f _b64/bundle/count ]; then
+            need=$(tr -d '[:space:]' < _b64/bundle/count)
+            have=$(ls _b64/bundle/ | grep -c '^part' || true)
+            if [ "$have" -lt "$need" ]; then
+              echo "Bundle incomplete: $have/$need parts. Waiting for the next push."
+              exit 0
+            fi
+            cat $(ls _b64/bundle/part* | sort) | base64 -d > /tmp/bundle.tar
+            if [ -f _b64/bundle/sha256 ]; then
+              echo "$(tr -d '[:space:]' < _b64/bundle/sha256)  /tmp/bundle.tar" | sha256sum -c -
+            fi
+            tar -xvf /tmp/bundle.tar
           fi
 
           find _b64 -type f -name '*.b64' -print | sort | while IFS= read -r f; do
@@ -34,7 +55,7 @@ jobs:
             echo "decoded $f -> $dest ($(wc -c < "$dest") bytes)"
           done
 
-          git rm -r _b64
+          git rm -r -q _b64
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
