@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://villav.ru/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Гостевой дом Вилла Венеция в Барнауле">
+<meta property="og:image:alt" content="Банкетный стол на «Вилле Венеция», Барнаул">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Банкет в Барнауле на Вилле Венеция — Пароходная, 49">
 <meta name="twitter:description" content="Банкет в Барнауле на Вилле Венеция: зал до 40 гостей, сезонный шатёр до 80, меню от 3 800 ₽ на гостя. Праздник, ночёвка и второй день в одном доме. Пароходная, 49.">
@@ -453,7 +453,7 @@ footer .logo b{color:var(--ivory)}
 .shot-row figcaption,.qphotos figcaption{font:500 12.5px/1.35 var(--sans);color:var(--txm);padding:8px 2px 0}
 .shot-row .vid{display:block;margin:20px 0 8px;max-width:360px}
 .shot-row .vid video{aspect-ratio:9/16;width:100%;background:#182e28;display:block;border-radius:14px}
-.q .qphotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:16px}
+.q .qphotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
 .q .qphotos figure{margin:0;border-radius:10px;overflow:hidden}
 .q .qphotos img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
 .way .way-cards{display:grid;grid-template-columns:repeat(2,minmax(0,400px));gap:16px 24px;margin:4px 0 28px;align-items:start}
@@ -500,6 +500,48 @@ footer .logo b{color:var(--ivory)}
 .hero-dock .stars{color:#8a5a16}
 }
 
+
+/* photo overhaul 2026-11-14 */
+.rev .grid{grid-template-columns:1fr;gap:34px}
+.score{position:static;display:grid;grid-template-columns:auto 1fr;gap:6px 36px;align-items:end;border-bottom:1px solid rgba(212,163,90,.25);padding-bottom:28px}
+.score .eyebrow{grid-column:1/-1}
+.score b{grid-row:2/5}
+.score .btn{justify-self:start;margin-top:10px}
+.qs{display:block;columns:2 300px;column-gap:16px}
+.qs .q{margin:0 0 16px!important;break-inside:avoid;-webkit-column-break-inside:avoid;display:block;width:100%}
+@media (min-width:1100px){.qs{columns:3 300px}}
+@media (max-width:700px){.qs{columns:1}.score{grid-template-columns:1fr}.score b{grid-row:auto}}
+.qs .q .who{font:600 13px/1.3 var(--sans);letter-spacing:.04em;color:var(--gold);margin:0 0 12px}
+.qs .q .who b{display:block;margin-bottom:4px;font:400 21px/1.2 var(--serif);letter-spacing:0;color:var(--ivory)}
+.qs .q p:not(.who){font-size:17px;line-height:1.5}
+.shot-row.vid{display:block;max-width:360px;margin:20px 0 8px}
+.shot-row.vid video{aspect-ratio:9/16;height:auto;border-radius:14px}
+.q .qphotos a,.shot-row a,.gal a,.place .pic a,.mosaic a,#second-day a{display:block}
+.q .qphotos video{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#182e28}
+.q .qphotos:has(>figure:only-child){grid-template-columns:1fr}
+.q .qphotos:has(>figure:nth-child(2):last-child){grid-template-columns:1fr 1fr}
+.q .qphotos figure:only-child img{aspect-ratio:4/3}
+.place .duo{grid-template-columns:repeat(3,minmax(0,1fr))}
+.place .duo figure{margin:0}
+.place .duo figcaption{font:500 12.5px/1.35 var(--sans);color:var(--txm);padding:6px 2px 0}
+.place .pic a{display:block}
+.spa-l{min-width:0}
+.mosaic.one{display:block;height:auto;margin:0}
+.mosaic.one img{aspect-ratio:4/3;height:auto;width:100%;object-fit:cover;border-radius:14px}
+.mosaic.one figcaption{font:500 12.5px/1.35 var(--sans);opacity:.75;padding:8px 2px 0}
+.panel-d .src,.oc .src{display:inline-block;margin-top:10px;font:500 12px/1.3 var(--sans);color:rgba(239,230,212,.8);text-decoration:underline;text-underline-offset:3px;position:relative;z-index:2}
+.way .way-cards{grid-template-columns:1fr 1fr;width:100%;max-width:none;gap:16px}
+.way .way-cards .map-card img{aspect-ratio:3/4;object-fit:cover}
+@media (max-width:700px){.way .way-cards{grid-template-columns:1fr 1fr;gap:10px}}
+.way{background:var(--ink2)}
+.final{position:relative;overflow:hidden;color:var(--ivory)}
+.final .bg{position:absolute;inset:0}
+.final .bg picture,.final .bg img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 22%}
+.final{min-height:720px;display:flex;align-items:flex-end;padding-bottom:70px}
+.final .wrap{width:100%}
+.final .lead{color:#f4ead6!important}
+.final .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,23,.05) 0%,rgba(13,26,23,.15) 35%,rgba(13,26,23,.72) 62%,rgba(13,26,23,.8) 100%)}
+.final .wrap{position:relative;z-index:1;text-shadow:0 2px 14px rgba(0,0,0,.65)}
 </style>
 <!--
   Аналитика: место под счётчик Яндекс.Метрики.
@@ -620,7 +662,7 @@ footer .logo b{color:var(--ivory)}
     <div class="eyebrow rv">КУХНЯ ВИЛЛЫ</div>
     <h2 class="h2 rv d1" style="margin-top:22px">За штурвалом кухни — <em>наша команда.</em></h2>
     <p class="lead-approved rv d2" style="margin-top:26px">Для вашего важного события банкет приготовят постоянные повара Виллы Венеция. Они создают меню, знают свою кухню и весь ход большого праздника.</p>
-    <div class="shot-row rv d2"><figure><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками, салатами и фруктами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/food-03-800.webp 800w, images/food-03-1600.webp 1600w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/food-03.jpg" width="1600" height="2400" alt="Закуски и фрукты на банкетном столе. Фото из отзыва в 2ГИС, Полина Бодрова, 9 июля 2025" loading="lazy"></picture></figure></div>
+    <div class="shot-row rv d2"><figure><picture><source type="image/webp" srcset="images/kitchen-chef-800.webp 800w, images/kitchen-chef-1500.webp 1500w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/kitchen-chef.jpg" width="1500" height="1083" alt="Команда кухни «Виллы Венеция» у банкетного стола" loading="lazy"></picture><figcaption>Наша команда кухни</figcaption></figure><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/kitchen-buffet-2022-800.webp 800w, images/kitchen-buffet-2022-1024.webp 1024w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/kitchen-buffet-2022.jpg" width="1024" height="956" alt="Банкетный стол с закусками и горячим в зале" loading="lazy"></picture></a><figcaption>Банкетный стол · фото владельца в 2ГИС, август 2022</figcaption></figure><figure><picture><source type="image/webp" srcset="images/sign-wall-800.webp 800w, images/sign-wall-1333.webp 1333w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/sign-wall.jpg" width="1333" height="1600" alt="Кованая вывеска «Вилла Венеция» на стене дома" loading="lazy"></picture><figcaption>Вывеска в доме</figcaption></figure></div>
     <div class="more rv">
       <p>Утка шеф-копчения. Духовая буженина. Ростбиф.</p>
       <p style="margin-top:12px">И другие вкусности от шефа.</p>
@@ -641,7 +683,7 @@ footer .logo b{color:var(--ivory)}
     <h2 class="h2 rv d1" style="margin-top:22px">Ваш праздник — <em>наша репутация</em></h2>
     <p class="lead-approved rv d2" style="margin-top:26px">В начале нашего пути мы несколько раз разрешали приглашать сторонние команды. И поняли простую вещь: гость не разделяет площадку, кухню и обслуживание. Если еда или подача подвели, он не вспоминает название приглашённой организации — он говорит, что его плохо накормили на Вилле Венеция.</p>
     <p class="lead rv d2" style="margin-top:16px">Поэтому сегодня банкет готовят только наши постоянные повара. Они создают меню, знают свою кухню и весь ход большого праздника. Это не ограничение для гостя, а наше решение отвечать за то, с каким впечатлением люди уедут из Венеции.</p>
-    <div class="shot-row pair rv d2"><figure><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 40vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture></figure><figure><picture><source type="image/webp" srcset="images/banquet-tent-800.webp 800w, images/banquet-tent-1600.webp 1600w" sizes="(max-width:700px) 50vw, 40vw"><img src="images/banquet-tent.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету: длинные столы и тканевый потолок" loading="lazy"></picture></figure></div>
+    <div class="shot-row rv d2"><figure><picture><source type="image/webp" srcset="images/hall-table-800.webp 800w, images/hall-table-1500.webp 1500w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/hall-table.jpg" width="1500" height="1081" alt="Банкетный зал «Вилла Венеция»: накрытый стол со свечами" loading="lazy"></picture><figcaption>Банкетный зал до 40 гостей</figcaption></figure><figure><picture><source type="image/webp" srcset="images/hall-waitresses-800.webp 800w, images/hall-waitresses-1500.webp 1500w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/hall-waitresses.jpg" width="1500" height="847" alt="Официантки в банкетном зале перед праздником" loading="lazy"></picture><figcaption>Обслуживание — наша команда</figcaption></figure><figure><picture><source type="image/webp" srcset="images/tent-main-800.webp 800w, images/tent-main-901.webp 901w" sizes="(max-width:700px) 50vw, 30vw"><img src="images/tent-main.jpg" width="901" height="1600" alt="Шатёр, накрытый к банкету: длинный стол, гирлянды и монограмма молодожёнов" loading="lazy"></picture><figcaption>Шатёр до 80 гостей</figcaption></figure></div>
     <figure class="shot-row vid rv d2">
       <video muted loop playsinline autoplay preload="metadata" poster="images/banquet-table-poster.jpg" width="720" height="1280">
         <source src="images/banquet-table.mp4" type="video/mp4">
@@ -672,8 +714,8 @@ footer .logo b{color:var(--ivory)}
         <p class="who"><b>Людмила</b>5★ · 14 августа 2026</p>
         <p>Играли свадьбу в Вилла Венеция! <br>
         Отличное место, вкуснейшая кухня, команда супер!!! Все гости остались довольны! Сравнивали с недавней свадьбой в ресторане Барнаула, в Виннеции в миллион раз лучше) Молодожены в восторге) Поставили задачу команде и она была выполнена на 110%. Спасибо огромное Станиславу, за такое клёвое место и незабываемые эмоции)</p>
-        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 70vw, 180px"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками" loading="lazy"></picture></figure></div>
-        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 14 августа 2026</cite>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-ludmila-n-800.webp 800w, images/rev-ludmila-n-960.webp 960w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-ludmila-n.jpg" width="960" height="1280" alt="Накрытые столы в банкетном зале «Виллы Венеция»" loading="lazy"></picture></a><figcaption>Банкет на Вилле · фото владельца в 2ГИС, май 2024 (не из этого отзыва)</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/268570448" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 14 августа 2026 ↗</a></cite>
       </div>
       <div class="q rv d1" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
         <p class="who"><b>Алена Милешина</b>5★ · 28 июня 2026</p>
@@ -685,8 +727,8 @@ footer .logo b{color:var(--ivory)}
         ▫️Кухня и сервис. Здесь всё на высшем уровне. Повара — настоящие мастера своего дела. Все блюда были очень вкусными! А официанты - оперативны и внимательны к мелочам. <br>
         ▫️Развлечения. На территории есть всё для идеального отдыха: отличная баня, беседки, качели и чан. Это был отдельный вид удовольствия! </p>
         <p>«Венеция»— это место с потрясающей атмосферой и душой. Если вы ищете не просто площадку, а настоящий дом для своего праздника, где к вам отнесутся с искренним гостеприимством, — вам точно сюда!</p>
-        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 70vw, 180px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture></figure></div>
-        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 28 июня 2026</cite>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-alena-n-800.webp 800w, images/rev-alena-n-960.webp 960w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-alena-n.jpg" width="960" height="1280" alt="Оформленный праздничный стол на территории" loading="lazy"></picture></a><figcaption>Оформление стола · фото владельца в 2ГИС, май 2024 (не из этого отзыва)</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/253878788" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 28 июня 2026 ↗</a></cite>
       </div>
       <div class="q rv" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
         <p class="who"><b>Полина Бодрова</b>5★ · 9 июля 2025</p>
@@ -696,8 +738,8 @@ footer .logo b{color:var(--ivory)}
         В подарок получили видео нашей свадьбы сделанное Станиславом, были в восторге<br>
         Во время подготовки к свадьбе, все вопросы которые возникали Станислав решал очень быстро, объяснял на простом языке😹<br>
         Благодаря этому месту, случилась свадьба нашей мечты, спасибо огромное Станиславу и его команде❤️✨</p>
-        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/food-03-800.webp 800w, images/food-03-1600.webp 1600w" sizes="(max-width:700px) 45vw, 160px"><img src="images/food-03.jpg" width="1600" height="2400" alt="Закуски на банкетном столе" loading="lazy"></picture><figcaption>Фото из отзыва в 2ГИС</figcaption></figure><figure><picture><source type="image/webp" srcset="images/rev-polina-table-800.webp 800w, images/rev-polina-table-1600.webp 1600w" sizes="(max-width:700px) 45vw, 160px"><img src="images/rev-polina-table.jpg" width="1600" height="2400" alt="Оформленный президиум в банкетном зале" loading="lazy"></picture><figcaption>Фото из отзыва в 2ГИС</figcaption></figure></div>
-        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 9 июля 2025</cite>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/170495144" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-polina-kiss-800.webp 800w, images/rev-polina-kiss-1067.webp 1067w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-polina-kiss.jpg" width="1067" height="1600" alt="Молодожёны на причале «Виллы Венеция»" loading="lazy"></picture></a><figcaption>Фото из этого отзыва в 2ГИС</figcaption></figure><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/170495144" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-polina-stairs-800.webp 800w, images/rev-polina-stairs-1067.webp 1067w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-polina-stairs.jpg" width="1067" height="1600" alt="Молодожёны на лестнице дома" loading="lazy"></picture></a><figcaption>Фото из этого отзыва в 2ГИС</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/170495144" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 9 июля 2025 ↗</a></cite>
       </div>
       <div class="q rv d1" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
         <p class="who"><b>Анастасия Гиленко</b>5★ · 5 октября 2025</p>
@@ -705,8 +747,20 @@ footer .logo b{color:var(--ivory)}
         1. Само место - потрясающее, большой коттедж, уютный банкетный зал, хорошие номера. Мы искали место, где можно было по максимуму разместить на ночь гостей, так как было много приезжих - всем хватило спальных мест. Хозяин Стас веселый активный человек, всегда был на связи и помогал с вопросами. Администратор вообще прекрасная женщина, ненавязчивая (как прочитала в отзыве ниже), всегда была рядом, но ни за кем не «следила»<br>
         2. Кухня - это вообще отдельная история, все очень вкусно приготовлено, разнообразные блюда, красиво сервировано. Как и говорил Стас - губернаторский уровень🫶🏻</p>
         <p>Нам все очень понравилось, мы просто в восторге. Родители вообще не ожидали такого сервиса и уюта, так как мы планировали больше душевную вечеринку, нежели традиционную свадьбу и вилла Венеция нам помогла организовать именно то что нужно, спасибо🙌🏻🌺</p>
-        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/stay-720.webp 720w" sizes="(max-width:700px) 70vw, 180px"><img src="images/stay.jpg" width="720" height="1280" alt="Одна из комнат для гостей" loading="lazy"></picture></figure></div>
-        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 5 октября 2025</cite>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-anastasia-n-800.webp 800w, images/rev-anastasia-n-960.webp 960w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-anastasia-n.jpg" width="960" height="1280" alt="Банкетный зал «Виллы Венеция»" loading="lazy"></picture></a><figcaption>Банкетный зал · фото владельца в 2ГИС, май 2024 (не из этого отзыва)</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/190791747" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 5 октября 2025 ↗</a></cite>
+      </div>
+<div class="q rv d1" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
+        <p class="who"><b>татьяна дуванова</b>5★ · 5 октября 2025</p>
+        <p>Хочу оставить отзыв за свой отдых на вилле "Венеция" . 29 августа отгуляли свадьбу дочери, было все шикарно! Стол шикарный , все было вкусно, свеженько! Два дня пролетели незаметно, чувствовали себя как дома! Спасибо Стасу и всему персоналу за такой теплый прием! Прошел месяц , а у нас все разговоры о свадьбе! Все наши гости тоже в восторге! И дом и сад и баня, были в нашем распоряжении! Все супер🔥🔥🔥</p>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/190853409" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-duvanova-blue-800.webp 800w, images/rev-duvanova-blue-1200.webp 1200w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-duvanova-blue.jpg" width="1200" height="1600" alt="Гости свадьбы у цветочной арки на причале" loading="lazy"></picture></a><figcaption>Фото из этого отзыва в 2ГИС</figcaption></figure><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/190853409" target="_blank" rel="noopener" title="Открыть в 2ГИС"><video muted loop playsinline autoplay preload="none" poster="images/rev-duvanova-poster.jpg" width="400" height="720"><source src="images/rev-duvanova.mp4" type="video/mp4"></video></a><figcaption>Видео из этого отзыва в 2ГИС</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/190853409" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 5 октября 2025 ↗</a></cite>
+      </div>
+      <div class="q rv" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
+        <p class="who"><b>Станислав Стрельцов</b>5★ · 3 сентября 2025</p>
+        <p>29 августа, состоялась наша свадьба в этом замечательном месте. Спасибо большое Станиславу и всему персоналу за помощь в организации нашего события и за гостеприимство. В номерах было чисто и уютно, территория прекрасна и живописна. Отдельная благодарность за баню и чан. Все прошло хорошо, свадьба удалась!))) Обязательно вернёмся сюда уже на новые мероприятия нашей семьи.</p>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/183583641" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-streltsov-1-800.webp 800w, images/rev-streltsov-1-1078.webp 1078w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-streltsov-1.jpg" width="1078" height="1511" alt="Молодожёны у арки на причале «Виллы Венеция»" loading="lazy"></picture></a><figcaption>Фото из этого отзыва в 2ГИС</figcaption></figure><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/183583641" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-streltsov-2-800.webp 800w, images/rev-streltsov-2-1066.webp 1066w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-streltsov-2.jpg" width="1066" height="1384" alt="Молодожёны за деревянным столом на территории" loading="lazy"></picture></a><figcaption>Фото из этого отзыва в 2ГИС</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/183583641" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 3 сентября 2025 ↗</a></cite>
       </div>
       <div class="q rv" style="border:1px solid rgba(212,163,90,.35);border-radius:14px;margin-bottom:14px;padding:22px">
         <p class="who"><b>Elizabeth Bolotova</b>5★ · 29 июля 2026</p>
@@ -714,8 +768,8 @@ footer .logo b{color:var(--ivory)}
         <p>Огромное спасибо Ирине за чёткую организацию и душевное отношение, а Станиславу — за гостеприимство и тёплый приём. Всё было на высшем уровне: вкуснейшая еда, комфортное размещение, а на второй день — божественная баня с чаном! 🔥</p>
         <p>Отдельное спасибо за то, что всё в одном комплексе и цена — просто отличная за такие условия! Однозначно 5 из 5. </p>
         <p>Желаем процветания, новых ярких событий, добрых гостей и побольше счастливых улыбок. 🤍</p>
-        <div class="qphotos"><figure><picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="(max-width:700px) 70vw, 180px"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture></figure></div>
-        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px">Отзыв в 2ГИС · 29 июля 2026</cite>
+        <div class="qphotos"><figure><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/rev-elizabeth-n-800.webp 800w, images/rev-elizabeth-n-960.webp 960w" sizes="(max-width:700px) 45vw, 200px"><img src="images/rev-elizabeth-n.jpg" width="960" height="1280" alt="Фуршет на территории «Виллы Венеция»" loading="lazy"></picture></a><figcaption>Фуршет на территории · фото владельца в 2ГИС, май 2024 (не из этого отзыва)</figcaption></figure></div>
+        <cite style="color:var(--gold);font-style:normal;font:500 13.5px/1.3 var(--sans);display:block;margin-top:12px"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/reviews/review/262404533" target="_blank" rel="noopener" style="color:inherit">Отзыв в 2ГИС · 29 июля 2026 ↗</a></cite>
       </div>
     </div>
   </div>
@@ -729,7 +783,7 @@ footer .logo b{color:var(--ivory)}
   <div class="wrap">
     <h2 class="h2 rv d1">ВТОРОЙ ДЕНЬ И МАНГАЛ</h2>
     <figure class="rv d2" style="margin:28px 0 0;max-width:640px;border-radius:14px;overflow:hidden">
-      <picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 100vw, 640px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег — место для второго дня" loading="lazy"></picture>
+      <a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/second-day-gazebo-800.webp 800w, images/second-day-gazebo-900.webp 900w" sizes="(max-width:700px) 100vw, 640px"><img src="images/second-day-gazebo.jpg" width="900" height="1200" alt="Беседка и стол у пруда на территории «Виллы Венеция», вид сверху" loading="lazy"></picture></a><figcaption style="font:500 12.5px/1.35 var(--sans);opacity:.8;padding:8px 2px 0">Беседка у пруда · фото гостя в 2ГИС</figcaption>
     </figure>
     <p class="lead-approved rv d2" style="margin-top:26px;max-width:52rem">После банкета мы сохраним нетронутые закуски в гостевом холодильнике. На второй день Большая кухня — для разогрева и сервировки, а мангальная зона полностью в вашем распоряжении — здесь можно готовить самостоятельно.</p>
   </div>
@@ -830,9 +884,8 @@ footer .logo b{color:var(--ivory)}
       </form>
       <aside class="result rv d1" aria-label="Ваш праздник">
         <div class="ph">
-          <picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:980px) 100vw, 40vw"><img id="rimg" src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture>
-          <img id="rimg2" class="hide" src="images/banquet-tent.jpg" width="1600" height="1067" alt="" loading="lazy">
-          <span id="rcap">Банкетный зал</span>
+          <picture><source type="image/webp" srcset="images/build-ceremony-800.webp 800w, images/build-ceremony-960.webp 960w" sizes="(max-width:980px) 100vw, 40vw"><img src="images/build-ceremony.jpg" width="960" height="1280" alt="Молодожёны у цветочной арки на выездной регистрации" loading="lazy" id="rimg"></picture>
+          <span id="rcap">Выездная регистрация · <a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" style="color:inherit">фото владельца в 2ГИС</a></span>
         </div>
         <div class="bd">
           <div class="eyebrow" style="color:#9a6a26">Ваш праздник</div>
@@ -855,8 +908,8 @@ footer .logo b{color:var(--ivory)}
 <section class="paper place" id="place">
   <div class="wrap grid">
     <figure class="pic rv" style="margin:0">
-      <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:900px) 100vw, 50vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом «Вилла Венеция»: дорожка, газон и стулья для регистрации" loading="lazy"></picture>
-      
+      <a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/place-ceremony-800.webp 800w, images/place-ceremony-960.webp 960w" sizes="(max-width:900px) 100vw, 50vw"><img src="images/place-ceremony.jpg" width="960" height="1280" alt="Выездная регистрация у пруда: цветочная арка и гости на газоне" loading="lazy"></picture></a>
+      <figcaption>Регистрация у пруда · фото владельца в 2ГИС, май 2024</figcaption>
     </figure>
     <div>
       <div class="eyebrow rv">Место и масштаб</div>
@@ -872,8 +925,7 @@ footer .logo b{color:var(--ivory)}
         <li>Мангальная зона — в вашем распоряжении</li>
       </ul>
       <div class="duo rv">
-        <picture><source type="image/webp" srcset="images/house-800.webp 800w, images/house-1600.webp 1600w" sizes="(max-width:900px) 50vw, 25vw"><img src="images/house.jpg" width="1600" height="2133" alt="Фасад гостевого дома «Вилла Венеция»" loading="lazy"></picture>
-        <picture><source type="image/webp" srcset="images/gazebo-800.webp 800w, images/gazebo-1600.webp 1600w" sizes="(max-width:900px) 50vw, 25vw"><img src="images/gazebo.jpg" width="1600" height="2242" alt="Беседка на территории «Виллы Венеция»" loading="lazy"></picture>
+        <figure><picture><source type="image/webp" srcset="images/room-attic-800.webp 800w, images/room-attic-980.webp 980w" sizes="(max-width:900px) 33vw, 15vw"><img src="images/room-attic.jpg" width="980" height="1600" alt="Комната для гостей под скатом крыши" loading="lazy"></picture><figcaption>Комната наверху</figcaption></figure><figure><picture><source type="image/webp" srcset="images/room-bath-736.webp 736w" sizes="(max-width:900px) 33vw, 15vw"><img src="images/room-bath.jpg" width="736" height="1031" alt="Санузел с душевой кабиной в доме" loading="lazy"></picture><figcaption>Душевая</figcaption></figure><figure><picture><source type="image/webp" srcset="images/lobby-800.webp 800w, images/lobby-1500.webp 1500w" sizes="(max-width:900px) 33vw, 15vw"><img src="images/lobby.jpg" width="1500" height="844" alt="Холл дома с диваном и лестницей" loading="lazy"></picture><figcaption>Холл</figcaption></figure>
       </div>
     </div>
   </div>
@@ -895,23 +947,23 @@ footer .logo b{color:var(--ivory)}
     <div class="stick">
       <div class="track" id="track">
         <article class="panel-d">
-          <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="100vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture>
+          <picture><source type="image/webp" srcset="images/tl-ceremony-2026-800.webp 800w, images/tl-ceremony-2026-900.webp 900w" sizes="100vw"><img src="images/tl-ceremony-2026.jpg" width="900" height="1600" alt="Выездная регистрация у дома: гости на стульях, июль 2026" loading="lazy"></picture>
           <div class="tx">
             <div class="k">I · День</div>
             <h3>Заезд и регистрация</h3>
             <p>С 13:00 дом ваш. Зона регистрации с пирсом и аркой; газон у нас под церемонию, не под игры. Стулья для регистрации — 100&nbsp;₽ за штуку, каркас арки бесплатно.</p>
-          </div>
+          <a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div>
         </article>
         <article class="panel-d">
-          <picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="100vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture>
+          <picture><source type="image/webp" srcset="images/tl-heart-arch-800.webp 800w, images/tl-heart-arch-1440.webp 1440w" sizes="100vw"><img src="images/tl-heart-arch.jpg" width="1440" height="959" alt="Молодожёны у арки-сердца с фонтанами искр вечером" loading="lazy"></picture>
           <div class="tx">
             <div class="k">II · Вечер</div>
             <h3>Застолье в зале до&nbsp;40</h3>
             <p>Банкетный зал — для стола и танцев. После 22:00 музыка только внутри, окна и двери закрыты: на улице тишина с 22:00 до 08:00.</p>
-          </div>
+          <a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div>
         </article>
         <article class="panel-d">
-          <picture><source type="image/webp" srcset="images/stay-720.webp 720w" sizes="100vw"><img src="images/stay.jpg" width="720" height="1280" alt="Комната для гостей в доме" loading="lazy"></picture>
+          <picture><source type="image/webp" srcset="images/room-warm-800.webp 800w, images/room-warm-833.webp 833w" sizes="100vw"><img src="images/room-warm.jpg" width="833" height="1600" alt="Тёплая комната для гостей с кроватью и диваном" loading="lazy"></picture>
           <div class="tx">
             <div class="k">III · Ночь</div>
             <h3>Остаться в доме</h3>
@@ -919,21 +971,21 @@ footer .logo b{color:var(--ivory)}
           </div>
         </article>
         <article class="panel-d">
-          <picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="100vw"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture>
+          <picture><source type="image/webp" srcset="images/tl-bath-room-800.webp 800w, images/tl-bath-room-1024.webp 1024w" sizes="100vw"><img src="images/tl-bath-room.jpg" width="1024" height="768" alt="Комната отдыха в бане, деревянные стены" loading="lazy"></picture>
           <div class="tx">
             <div class="k">IV · Баня и чан</div>
             <h3>Если захотите пар</h3>
             <p>Баня и чан — вместе 3&nbsp;500&nbsp;₽ в час, минимум 4 часа. Это платный доп, в базовую аренду дома не входит. Мастер пара — отдельно.</p>
-          </div>
+          <a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div>
         </article>
         <article class="panel-d">
-          <picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="100vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом «Вилла Венеция»: дорожка, газон и стулья для регистрации" loading="lazy"></picture>
+          <picture><source type="image/webp" srcset="images/tl-flower-dress-800.webp 800w, images/tl-flower-dress-1280.webp 1280w" sizes="100vw"><img src="images/tl-flower-dress.jpg" width="1280" height="1280" alt="Гости на лужайке, девушка в платье с цветами" loading="lazy"></picture>
           <div class="tx">
             <div class="k">V · Утро</div>
             <h3>Останься — завтра будет ещё теплее</h3>
             <p>Выезд до 11:00 — есть время спокойно позавтракать. После банкета мы сохраним нетронутые закуски в гостевом холодильнике. На второй день Большая кухня — для разогрева и сервировки, а мангальная зона полностью в вашем распоряжении — здесь можно готовить самостоятельно.</p>
             <p class="who" style="margin-top:18px"><b>Elizabeth Bolotova</b>5★ · свадьба на 2 дня, вкуснейшая еда, баня с чаном на второй день. Полный текст — в <a href="#rev">отзывах о кухне</a>, дословно из 2ГИС.</p>
-          </div>
+          <a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div>
         </article>
       </div>
       <div class="dprog" id="dprog" aria-hidden="true">
@@ -951,7 +1003,10 @@ footer .logo b{color:var(--ivory)}
 -->
 <section class="spa" id="spa">
   <div class="wrap grid">
-    <div class="mosaic rv"><picture><source type="image/webp" srcset="images/chan-800.webp 800w, images/chan-1600.webp 1600w" sizes="(max-width:900px) 100vw, 30vw"><img src="images/chan.jpg" width="1600" height="2133" alt="Чан на территории «Виллы Венеция»" loading="lazy"></picture><picture><source type="image/webp" srcset="images/bath-800.webp 800w, images/bath-1600.webp 1600w" sizes="(max-width:900px) 50vw, 20vw"><img src="images/bath.jpg" width="1600" height="903" alt="Чан: вид сверху" loading="lazy"></picture><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:900px) 50vw, 20vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом на территории" loading="lazy"></picture>
+    <div class="spa-l">
+      <figure class="mosaic one rv"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/spa-chan-800.webp 800w, images/spa-chan-1024.webp 1024w" sizes="(max-width:900px) 100vw, 45vw"><img src="images/spa-chan.jpg" width="1024" height="743" alt="Чан на территории «Виллы Венеция»: гости в чане, хозяйка помешивает воду" loading="lazy"></picture></a><figcaption>Чан · фото владельца в 2ГИС</figcaption></figure>
+      <h3 class="rv" style="font-family:var(--serif);font-size:1.45rem;margin:26px 0 12px">Каждый год мы делаем что-то новое</h3>
+      <p class="lead rv d1">В этом году баню полностью переделали вместе с пар-мастером Алексеем Ромашкевичем. Теперь у нас новая парная, тёплый пол, новый котёл и обновлённый чан. Рядом появилась новая мангальная зона.</p>
     </div>
     <div>
       <div class="eyebrow rv">Баня и чан</div>
@@ -985,11 +1040,11 @@ footer .logo b{color:var(--ivory)}
       <p class="lead rv d2" style="max-width:420px">Свадьба, юбилей, корпоратив, день рождения, отдых с друзьями. Выпускные — только с ответственным взрослым.</p>
     </div>
     <div class="rowx">
-      <article class="oc rv"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="330px"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture><div class="tx"><h3>Свадьба</h3><p class="fact">Зона регистрации с пирсом и аркой, зал до 40, ночёвка в доме, второй день без лишних заморочек.</p></div></article>
-      <article class="oc rv d1"><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="330px"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал «Вилла Венеция» с накрытыми столами" loading="lazy"></picture><div class="tx"><h3>Юбилей</h3><p class="fact">Зал, дом и территория в одном месте. Банкетное меню — от 3&nbsp;800&nbsp;₽ с человека.</p></div></article>
-      <article class="oc rv d2"><picture><source type="image/webp" srcset="images/guests-800.webp 800w, images/guests-1600.webp 1600w" sizes="330px"><img src="images/guests.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету" loading="lazy"></picture><div class="tx"><h3>Корпоратив</h3><p class="fact">Беседка до 20, банкетный зал до 40, шатёр до 80 — на любую компанию. Парковка до 30 машин.</p></div></article>
-      <article class="oc rv d3"><picture><source type="image/webp" srcset="images/entrance-720.webp 720w" sizes="330px"><img src="images/entrance.jpg" width="720" height="1280" alt="Вход, оформленный к торжеству" loading="lazy"></picture><div class="tx"><h3>Выпускной</h3><p class="fact">Только с ответственным взрослым.</p></div></article>
-      <article class="oc rv"><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="330px"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture><div class="tx"><h3>Отдых с друзьями</h3><p class="fact">Дом, мангальная зона, при желании — баня с чаном как доп.</p></div></article>
+      <article class="oc rv"><picture><source type="image/webp" srcset="images/occ-wedding-768.webp 768w" sizes="330px"><img style="object-position:center 80%" src="images/occ-wedding.jpg" width="768" height="1024" alt="Свадебный стол с розовым оформлением в зале" loading="lazy"></picture><div class="tx"><h3>Свадьба</h3><p class="fact">Зона регистрации с пирсом и аркой, зал до 40, ночёвка в доме, второй день без лишних заморочек.</p><a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div></article>
+      <article class="oc rv d1"><picture><source type="image/webp" srcset="images/occ-jubilee-800.webp 800w, images/occ-jubilee-1440.webp 1440w" sizes="330px"><img src="images/occ-jubilee.jpg" width="1440" height="959" alt="Гости поднимают бокалы в шатре" loading="lazy"></picture><div class="tx"><h3>Юбилей</h3><p class="fact">Зал, дом и территория в одном месте. Банкетное меню — от 3&nbsp;800&nbsp;₽ с человека.</p><a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div></article>
+      <article class="oc rv d2"><picture><source type="image/webp" srcset="images/occ-corporate-800.webp 800w, images/occ-corporate-1440.webp 1440w" sizes="330px"><img src="images/occ-corporate.jpg" width="1440" height="959" alt="Ведущий с микрофоном и гости за столами в шатре" loading="lazy"></picture><div class="tx"><h3>Корпоратив</h3><p class="fact">Беседка до 20, банкетный зал до 40, шатёр до 80 — на любую компанию. Парковка до 30 машин.</p><a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div></article>
+      <article class="oc rv d3"><picture><source type="image/webp" srcset="images/occ-graduation-787.webp 787w" sizes="330px"><img src="images/occ-graduation.jpg" width="787" height="1024" alt="Гости у фотозоны на газоне" loading="lazy"></picture><div class="tx"><h3>Выпускной</h3><p class="fact">Только с ответственным взрослым.</p><a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div></article>
+      <article class="oc rv"><picture><source type="image/webp" srcset="images/occ-friends-800.webp 800w, images/occ-friends-1003.webp 1003w" sizes="330px"><img src="images/occ-friends.jpg" width="1003" height="1024" alt="Компания отдыхает на лужайке у дома" loading="lazy"></picture><div class="tx"><h3>Отдых с друзьями</h3><p class="fact">Дом, мангальная зона, при желании — баня с чаном как доп.</p><a class="src" href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener">фото владельца в 2ГИС ↗</a></div></article>
     </div>
   </div>
 </section>
@@ -1011,17 +1066,12 @@ footer .logo b{color:var(--ivory)}
         <label class="chip"><input type="radio" name="gs" value="w"><span>Зима</span></label>
       </div>
     </div>
-    <p class="lead rv" style="margin:-12px 0 28px">Пока здесь плейсхолдеры. Положите фото владельца в папку <code>images/</code> с теми же именами — смотрите <code>images/README.md</code>. [НУЖНО ОТ ВЛАДЕЛЬЦА: 12–15 фото: дом, зал, территория, баня и чан, гости]</p>
+    <p class="lead rv" style="margin:-12px 0 28px">Фото владельца в 2ГИС — нажмите на фото, чтобы открыть источник.</p>
     <div class="ggrid" id="ggrid">
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/day-facade-800.webp 800w, images/day-facade-1280.webp 1280w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/day-facade.jpg" width="1280" height="720" alt="Дневной фасад «Виллы Венеция» со стороны дороги" loading="lazy"></picture><figcaption>Дневной фасад</figcaption></figure><figure data-s="s"><picture><source type="image/webp" srcset="images/hero-mobile-800.webp 800w, images/hero-mobile-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hero-mobile.jpg" width="1440" height="2560" alt="Дом «Вилла Венеция»: фасад, белые стулья на газоне и беседка" loading="lazy"></picture><figcaption>Дом и сад</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и дом: газон, дорожка и стулья для регистрации" loading="lazy"></picture><figcaption>Сад и зона регистрации</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/hall-800.webp 800w, images/hall-896.webp 896w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/hall.jpg" width="896" height="1196" alt="Банкетный зал с накрытыми столами" loading="lazy"></picture><figcaption>Банкетный зал</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/gazebo-800.webp 800w, images/gazebo-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gazebo.jpg" width="1600" height="2242" alt="Беседка на территории" loading="lazy"></picture><figcaption>Беседка</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-800.webp 800w, images/territory-1440.webp 1440w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory.jpg" width="1440" height="2560" alt="Сад и зона регистрации: газон, стулья и дом" loading="lazy"></picture><figcaption>Зона регистрации</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/banquet-tent-800.webp 800w, images/banquet-tent-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/banquet-tent.jpg" width="1600" height="1067" alt="Шатёр, накрытый к банкету" loading="lazy"></picture><figcaption>Шатёр к банкету</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/territory-river-800.webp 800w, images/territory-river-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/territory-river.jpg" width="1600" height="2844" alt="Территория дома: беседка и берег" loading="lazy"></picture><figcaption>Территория и беседка</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/entrance-720.webp 720w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/entrance.jpg" width="720" height="1280" alt="Вход, оформленный к торжеству" loading="lazy"></picture><figcaption>Вход к торжеству</figcaption></figure>
-      <figure data-s="s"><picture><source type="image/webp" srcset="images/food-01-720.webp 720w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/food-01.jpg" width="720" height="1280" alt="Банкетный стол с закусками и фруктами" loading="lazy"></picture><figcaption>Банкетный стол</figcaption></figure>
+      <figure data-s="s"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/gal-hall-2022-800.webp 800w, images/gal-hall-2022-1024.webp 1024w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gal-hall-2022.jpg" width="1024" height="630" alt="Банкетный зал, накрытый к свадьбе" loading="lazy"></picture></a><figcaption>Банкетный зал · 2ГИС</figcaption></figure>
+      <figure data-s="s"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/gal-tent-2022-800.webp 800w, images/gal-tent-2022-1024.webp 1024w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gal-tent-2022.jpg" width="1024" height="684" alt="Гости за столами в шатре" loading="lazy"></picture></a><figcaption>Шатёр с гостями · 2ГИС</figcaption></figure>
+      <figure data-s="s"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/gal-fire-heart-800.webp 800w, images/gal-fire-heart-960.webp 960w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gal-fire-heart.jpg" width="960" height="1280" alt="Молодожёны у огненного сердца вечером" loading="lazy"></picture></a><figcaption>Огненное сердце · 2ГИС</figcaption></figure>
+      <figure data-s="s"><a href="https://2gis.ru/barnaul/firm/563479234569243/tab/photos" target="_blank" rel="noopener" title="Открыть в 2ГИС"><picture><source type="image/webp" srcset="images/gal-sparklers-800.webp 800w, images/gal-sparklers-960.webp 960w" sizes="(max-width:700px) 50vw, 33vw"><img src="images/gal-sparklers.jpg" width="960" height="1280" alt="Живой коридор с бенгальскими огнями" loading="lazy"></picture></a><figcaption>Бенгальские огни · 2ГИС</figcaption></figure>
       <figure data-s="w" hidden><p class="lead" style="padding:28px 8px">Зимние фотографии дома появятся здесь позже.</p></figure>
     </div>
   </div>
@@ -1063,7 +1113,7 @@ footer .logo b{color:var(--ivory)}
   (в) Сознательно не написал: «5 минут от центра», «шаговая доступность», «800 м / 840 м», «Затон», «пешком от остановки», телефон из образца, «круглосуточно»
 -->
 <section class="way" id="way">
-  <div class="bg"><picture><source type="image/webp" srcset="images/house-800.webp 800w, images/house-1600.webp 1600w" sizes="100vw"><img src="images/house.jpg" width="1600" height="2133" alt="Фасад гостевого дома «Вилла Венеция»" loading="lazy"></picture></div>
+  <div class="bg"></div>
   <div class="wrap">
     <div class="eyebrow rv">Как добраться</div>
     <h2 class="h2 rv d1">Барнаул, <em>Пароходная,&nbsp;49</em></h2>
@@ -1136,6 +1186,7 @@ footer .logo b{color:var(--ivory)}
   Рабочий текст, не утверждено. [НУЖНО ОТ ВЛАДЕЛЬЦА: текст кнопок]
 -->
 <section class="final">
+  <div class="bg" aria-hidden="true"><picture><source type="image/webp" srcset="images/final-sign-moon-800.webp 800w, images/final-sign-moon-1333.webp 1333w" sizes="100vw"><img src="images/final-sign-moon.jpg" width="1333" height="1600" alt="" loading="lazy"></picture></div>
   <div class="wrap">
     <div class="eyebrow rv">Бронирование</div>
     <h2 class="h2 rv d1">Свободна ли <em>ваша дата?</em></h2>
@@ -1215,14 +1266,7 @@ footer .logo b{color:var(--ivory)}
 
   var f=$('#bf'), gn=$('#gn'), gno=$('#gno'), dt=$('#dt');
   var t=new Date(); dt.min=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
-  var PH={
-    'Свадьба':{s:['images/territory.jpg','Зона регистрации'],w:['images/hall.jpg','Банкетный зал']},
-    'Юбилей':{s:['images/hall.jpg','Банкетный зал'],w:['images/banquet-tent.jpg','Шатёр']},
-    'Корпоратив':{s:['images/guests.jpg','Шатёр к банкету'],w:['images/house.jpg','Фасад дома']},
-    'Выпускной':{s:['images/entrance.jpg','Оформленный вход'],w:['images/hall.jpg','Банкетный зал']},
-    'День рождения':{s:['images/territory-river.jpg','Территория и беседка'],w:['images/chan.jpg','Чан']},
-    'Отдых с друзьями':{s:['images/chan.jpg','Чан'],w:['images/stay.jpg','Комната для гостей']}
-  };
+  var PH={'Свадьба':1,'Юбилей':1,'Корпоратив':1,'Выпускной':1,'День рождения':1,'Отдых с друзьями':1};
   var rimg=$('#rimg'), rimg2=$('#rimg2'), cur=rimg ? rimg.getAttribute('src') : '';
   function swap(src){
     if(!rimg||src===cur)return; cur=src;
@@ -1256,7 +1300,7 @@ footer .logo b{color:var(--ivory)}
     if(opts.indexOf('выездная регистрация')>-1) H.push(['Зона регистрации с пирсом и аркой. Стулья — 100 ₽/шт, каркас арки бесплатно. Газон — под регистрацию, не под игры.','']);
     if(opts.indexOf('шатёр')>-1) H.push(['Шатёр — сезонный платный доп, до 80 человек, стоимость индивидуально.','']);
     $('#hint').innerHTML=H.map(function(h){return '<p class="'+h[1]+'">'+h[0]+'</p>'}).join('');
-    var ph=PH[occ][se==='зима'?'w':'s']; swap(ph[0]); $('#rcap').textContent=ph[1];
+    
     $('#rt').textContent=occ+' · '+n+' '+plural(n,'гость','гостя','гостей')+(dd>1?' · '+dd+' '+plural(dd,'день','дня','дней'):'');
     var L=['Здравствуйте! Хочу забронировать гостевой дом «Вилла Венеция».','Повод: '+occ,
       'Дата: '+(dt.value?fmtDate(dt.value):'пока не выбрали')+' ('+dd+' '+plural(dd,'день','дня','дней')+')',
