@@ -570,12 +570,11 @@ footer .legal button:hover{color:var(--ivory)}
 </style>
 <!--
   Аналитика: Яндекс.Метрика подключается ТОЛЬКО после согласия посетителя в cookie-баннере (кнопка «Принять»).
-  [НУЖНО ОТ ВЛАДЕЛЬЦА: номер счётчика Яндекс.Метрики]
-  Чтобы включить — замените ВСТАВЬТЕ_НОМЕР на номер счётчика (только цифры) в строке VV_METRIKA_ID ниже.
-  Пока стоит заглушка, счётчик не загружается и никаких запросов к Яндексу нет.
+  Счётчик villav.ru: 114414286 (создан владельцем 21.11.2026). Номер меняется в одной строке VV_METRIKA_ID ниже (только цифры).
+  noscript-пиксель сознательно не ставим: он срабатывал бы без согласия.
 -->
 <script>
-  var VV_METRIKA_ID = 'ВСТАВЬТЕ_НОМЕР'; /* ← номер счётчика Метрики, например '12345678' */
+  var VV_METRIKA_ID = '114414286'; /* ← номер счётчика Яндекс.Метрики */
 </script>
 </head>
 <body>
@@ -1390,8 +1389,8 @@ footer .legal button:hover{color:var(--ivory)}
     m[i].l=1*new Date();
     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    window.ym(Number(id), "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=" + id, "ym");
+    window.ym(Number(id), "init", {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
   }
   function apply(v){ if(v==='all') loadMetrika(); }
   var v=get();
