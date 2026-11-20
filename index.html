@@ -25,9 +25,8 @@
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&amp;family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Шрифты размещены на сайте локально (fonts/fonts.css): без запросов к Google и передачи IP посетителя третьим лицам -->
+<link rel="stylesheet" href="fonts/fonts.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -542,23 +541,42 @@ footer .logo b{color:var(--ivory)}
 .final .lead{color:#f4ead6!important}
 .final .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,26,23,.05) 0%,rgba(13,26,23,.15) 35%,rgba(13,26,23,.72) 62%,rgba(13,26,23,.8) 100%)}
 .final .wrap{position:relative;z-index:1;text-shadow:0 2px 14px rgba(0,0,0,.65)}
+
+/* юридическое: согласие у кнопок, cookie-баннер, реквизиты */
+.pd-note{display:block;margin-top:10px;max-width:46em;font-size:12px;line-height:1.45;color:var(--mut);text-shadow:none}
+.pd-note a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.paper .pd-note,.result .pd-note{color:var(--txm)}
+.final .pd-note{color:#e4dccb;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.hero .pd-note{color:var(--ivory);text-shadow:0 1px 10px rgba(8,12,16,.9)}
+.pd-check{display:flex;gap:10px;align-items:flex-start;margin:14px 0 12px;font-size:13px;line-height:1.45;color:var(--txm);cursor:pointer}
+.pd-check input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:#9a6a26}
+.pd-check a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.pd-check.err{color:#a3361b}
+.pd-check.err input{outline:2px solid #c9643b;outline-offset:2px}
+footer .legal{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px 22px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+footer .legal a{text-decoration:underline;text-underline-offset:2px}
+footer .legal button{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+footer .legal button:hover{color:var(--ivory)}
+.ck{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;max-width:560px;margin-inline:auto;padding:18px 20px;border-radius:18px;background:rgba(13,26,23,.97);color:var(--ivory);border:1px solid var(--line2);box-shadow:0 18px 50px rgba(0,0,0,.5);font-size:14px;line-height:1.5}
+.ck[hidden]{display:none}
+.ck p{margin:0}
+.ck a{color:var(--gold2)}
+.ck .ck-b{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.ck .btn{min-height:44px;padding:0 20px;font-size:14.5px;flex:1 1 150px}
+@media (min-width:980px){.ck{left:auto;right:24px;bottom:24px;margin:0}}
+.final .pd-note{margin-inline:auto}
+.hero-dock .pd-note{grid-column:1/-1;margin-top:6px;max-width:30em;font-size:11.5px}
+@media (max-width:700px){.hero .pd-note{color:var(--txm);text-shadow:none;max-width:none}.ck{padding:14px 16px;font-size:13px;border-radius:16px}.ck .ck-b{margin-top:10px;gap:8px}.ck .btn{min-height:42px;font-size:14px;padding:0 12px}}
 </style>
 <!--
-  Аналитика: место под счётчик Яндекс.Метрики.
+  Аналитика: Яндекс.Метрика подключается ТОЛЬКО после согласия посетителя в cookie-баннере (кнопка «Принять»).
   [НУЖНО ОТ ВЛАДЕЛЬЦА: номер счётчика Яндекс.Метрики]
-  Номер не придуман. Когда появится — раскомментируйте шаблон ниже и подставьте номер вместо ВСТАВЬТЕ_НОМЕР.
+  Чтобы включить — замените ВСТАВЬТЕ_НОМЕР на номер счётчика (только цифры) в строке VV_METRIKA_ID ниже.
+  Пока стоит заглушка, счётчик не загружается и никаких запросов к Яндексу нет.
 -->
-<!--
-<script type="text/javascript">
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-  ym(ВСТАВЬТЕ_НОМЕР, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+<script>
+  var VV_METRIKA_ID = 'ВСТАВЬТЕ_НОМЕР'; /* ← номер счётчика Метрики, например '12345678' */
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/ВСТАВЬТЕ_НОМЕР" style="position:absolute; left:-9999px;" alt=""></div></noscript>
--->
 </head>
 <body>
 
@@ -614,6 +632,7 @@ footer .logo b{color:var(--ivory)}
     <div class="hero-dock">
     <a class="btn btn-line wa-link" href="https://wa.me/79646032023" target="_blank" rel="noopener">Написать в WhatsApp</a>
     <span class="wa-need">текст кнопок не утверждён</span>
+    <span class="pd-note">Нажимая кнопку, вы переходите в WhatsApp, соглашаетесь с <a href="policy.html">политикой обработки персональных данных</a> и даёте <a href="consent.html">согласие на обработку персональных данных</a>.</span>
     <div class="meta">
       <div class="it"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span>в 2ГИС, 83 отзыва</span></div>
       <div class="it">10 лет · около 60 мероприятий в год</div>
@@ -670,6 +689,7 @@ footer .logo b{color:var(--ivory)}
     <p class="rv d2" style="margin-top:28px">
       <a class="btn btn-gold" id="menu-wa" data-wa-fixed href="https://wa.me/79646032023?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B1%D0%B0%D0%BD%D0%BA%D0%B5%D1%82%D0%BD%D0%BE%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8E" target="_blank" rel="noopener">ПОСМОТРЕТЬ БАНКЕТНОЕ МЕНЮ ↗️</a>
     </p>
+    <span class="pd-note">Нажимая кнопку, вы переходите в WhatsApp, соглашаетесь с <a href="policy.html">политикой обработки персональных данных</a> и даёте <a href="consent.html">согласие на обработку персональных данных</a>.</span>
   </div>
 </section>
 <!--
@@ -891,7 +911,9 @@ footer .logo b{color:var(--ivory)}
           <div class="eyebrow" style="color:#9a6a26">Ваш праздник</div>
           <h3 id="rt" style="margin-top:14px">Свадьба · 17 гостей</h3>
           <div class="msg" id="rm"></div>
+          <label class="pd-check" id="pdc-l"><input type="checkbox" id="pdc" form="bf" required> <span>Я соглашаюсь с <a href="policy.html" target="_blank">политикой обработки персональных данных</a> и даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a></span></label>
           <a class="btn btn-gold" id="rs" href="https://wa.me/79646032023" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+          <span class="pd-note">Сообщение откроется в WhatsApp — отправляете его вы сами.</span>
           <p class="note">Цены от нас, итог складывается индивидуально: будни от 15&nbsp;000&nbsp;₽ (ориентир — компания до 10 человек), выходной от 30&nbsp;000&nbsp;₽. Возвратный депозит — от 5&nbsp;000&nbsp;₽, отдельно. Баня и шатёр в базовую аренду не входят. [НУЖНО ОТ ВЛАДЕЛЬЦА: подтверждение цен]</p>
         </div>
       </aside>
@@ -1149,6 +1171,7 @@ footer .logo b{color:var(--ivory)}
       <a class="btn btn-line wa-link" href="https://wa.me/79646032023" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <span class="wa-need"><a href="tel:+79646032023">+7 964 603-20-23</a> · [НУЖНО ОТ ВЛАДЕЛЬЦА: прямая ссылка на карточку 2ГИС]</span>
+    <span class="pd-note">Нажимая кнопку WhatsApp или звоня нам, вы соглашаетесь с <a href="policy.html">политикой обработки персональных данных</a> и даёте <a href="consent.html">согласие на обработку персональных данных</a>.</span>
   </div>
 </section>
 
@@ -1196,6 +1219,7 @@ footer .logo b{color:var(--ivory)}
       <a class="btn btn-line wa-link" href="https://wa.me/79646032023" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <span class="wa-need"><a href="tel:+79646032023">+7 964 603-20-23</a></span>
+    <span class="pd-note">Нажимая кнопку WhatsApp или звоня нам, вы соглашаетесь с <a href="policy.html">политикой обработки персональных данных</a> и даёте <a href="consent.html">согласие на обработку персональных данных</a>.</span>
   </div>
 </section>
 </main>
@@ -1203,15 +1227,32 @@ footer .logo b{color:var(--ivory)}
 <!--
   (а) Подвал лендинга
   (б) Название и адрес — раздел 3
-  (в) Сознательно не поставил телефон, Telegram, ВК, «круглосуточно», «Затон», юридические реквизиты, которых нет в ТЗ
+  (в) Сознательно не поставил Telegram, ВК, «круглосуточно», «Затон»
+  Реквизиты оператора ПДн — из договора владельца (самозанятый, ОГРН не требуется). Добавлено 20.11.2026.
 -->
 <footer>
   <div class="wrap">
     <div class="c"><a class="logo" href="#"><b>Вилла Венеция</b><span>Гостевой дом · Барнаул</span></a></div>
     <div class="c"><span>Барнаул, ул. Пароходная, 49</span><span>Заезд 13:00 · выезд 11:00</span></div>
-    <div class="c"><a class="wa-link" href="https://wa.me/79646032023" target="_blank" rel="noopener">WhatsApp</a><span><a href="tel:+79646032023">+7 964 603-20-23</a></span><a href="https://villav.ru/">villav.ru</a></div>
+    <div class="c"><a class="wa-link" href="https://wa.me/79646032023" target="_blank" rel="noopener">WhatsApp</a><span><a href="tel:+79646032023">+7 964 603-20-23</a></span><a href="https://villav.ru/">villav.ru</a><a href="mailto:stasik75@yandex.ru">stasik75@yandex.ru</a></div>
+    <div class="legal">
+      <span>Нижельский Станислав Евгеньевич, самозанятый (плательщик НПД), ИНН&nbsp;701738023966</span>
+      <span>Алтайский край, г.&nbsp;Барнаул, ул.&nbsp;Пароходная,&nbsp;49</span>
+      <a href="policy.html">Политика обработки персональных данных</a>
+      <a href="consent.html">Согласие на обработку персональных данных</a>
+      <button type="button" data-ck-open>Настройки cookie</button>
+    </div>
   </div>
 </footer>
+
+<!-- Cookie-баннер: Яндекс.Метрика и любые сторонние сервисы загружаются только после «Принять». Выбор хранится в localStorage (vv-consent). -->
+<div class="ck" id="ck" role="dialog" aria-live="polite" aria-label="Cookie и персональные данные" hidden>
+  <p>Мы используем cookie: необходимые — для работы сайта, аналитические (Яндекс.Метрика) — только с вашего согласия. Подробнее — в <a href="policy.html#cookies">политике обработки персональных данных</a>.</p>
+  <div class="ck-b">
+    <button type="button" class="btn btn-gold" data-ck="all">Принять</button>
+    <button type="button" class="btn btn-line" data-ck="necessary">Только необходимые</button>
+  </div>
+</div>
 
 <!--
   (а) Закреплённая внизу на телефоне кнопка WhatsApp (раздел 7)
@@ -1332,6 +1373,43 @@ footer .logo b{color:var(--ivory)}
     var w=r.value==='w'; gw.textContent=w?'зимой':'летом';
     $$('#ggrid figure').forEach(function(fg){var on=fg.dataset.s===(w?'w':'s'); fg.hidden=!on; if(on&&!RM){fg.classList.remove('fade');void fg.offsetWidth;fg.classList.add('fade')}});
   })});
+})();
+</script>
+<script>
+/* Согласие на cookie и загрузка Яндекс.Метрики только после «Принять» */
+(function(){
+  var KEY='vv-consent', ck=document.getElementById('ck');
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(KEY,v);localStorage.setItem(KEY+'-date',new Date().toISOString())}catch(e){}}
+  var loaded=false;
+  function loadMetrika(){
+    var id=String(window.VV_METRIKA_ID||'');
+    if(loaded || !/^\d+$/.test(id)) return; /* заглушка или пусто — ничего не грузим */
+    loaded=true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    window.ym(Number(id), "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+  }
+  function apply(v){ if(v==='all') loadMetrika(); }
+  var v=get();
+  if(v==='all'||v==='necessary'){ apply(v); } else if(ck){ ck.hidden=false; }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-ck]');
+    if(b){ var c=b.getAttribute('data-ck'); set(c); ck.hidden=true; if(c==='all') apply(c); else if(loaded) location.reload(); return; }
+    if(e.target.closest('[data-ck-open]')){ ck.hidden=false; var f=ck.querySelector('button'); if(f) f.focus(); }
+  });
+
+  /* Конструктор: отправка в WhatsApp только с отмеченным согласием */
+  var rs=document.getElementById('rs'), cb=document.getElementById('pdc'), lb=document.getElementById('pdc-l');
+  if(rs&&cb){
+    rs.addEventListener('click',function(e){
+      if(!cb.checked){ e.preventDefault(); e.stopImmediatePropagation(); lb.classList.add('err'); cb.focus(); }
+    },true);
+    cb.addEventListener('change',function(){ if(cb.checked) lb.classList.remove('err'); });
+  }
 })();
 </script>
 </body>
